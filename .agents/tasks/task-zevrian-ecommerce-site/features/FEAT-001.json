@@ -1,0 +1,45 @@
+{
+  "id": "FEAT-001",
+  "type": "feat",
+  "description": "Create the complete project structure, design system CSS, shared JavaScript modules, and all page HTML shells with navigation/footer. This is the foundation that all other features build upon.",
+  "status": "in_progress",
+  "steps": [
+    "Create the directory structure: zevrian-site/ with subdirectories css/, js/, images/, shop/, shop/kitchen-dining/, shop/home-organization/, shop/travel-outdoor/, shop/product/, contact/, privacy-policy/, terms-of-service/",
+    "Create zevrian-site/css/styles.css with a complete design system: CSS custom properties for colors (Primary #0F1A2E, Accent #C9A96E, Surface #FAFAFA, Muted #6B7280, Border #E5E7EB, White #FFFFFF), typography scale using Inter font, responsive grid system using CSS Grid/Flexbox, utility classes for spacing/sizing, component styles for buttons (primary gold accent, secondary outlined), cards, navigation, footer, forms, modals, toast notifications, star ratings, and responsive breakpoints (mobile-first)",
+    "Create zevrian-site/js/products.js containing the complete product data array of 18 products with: id, slug, name, price, category, categorySlug, description, features (array of 4-5 bullet points), rating (4.5-4.9 range), reviewCount, placeholder image color/pattern identifier. Products organized in 3 categories of 6 each: Kitchen & Dining, Home Organization, Travel & Outdoor",
+    "Create zevrian-site/js/main.js with shared functionality: mobile menu toggle, smooth scroll, newsletter form handler with validation and toast notification, utility functions for rendering product cards, generating star rating HTML, formatting currency",
+    "Create zevrian-site/js/cart.js with checkout modal functionality: open/close modal, form validation for card number/expiry/CVV with real-time formatting, PayPal button handler, success/error toast states, Stripe-style card input masking",
+    "Create the HTML shell template used by all pages: DOCTYPE html5, head with meta tags (viewport, charset, description, og tags), Google Fonts link for Inter, stylesheet link, inline SVG logo in header nav with 'Z' monogram + 'ZEVRIAN' wordmark, responsive navigation links (Home, Shop dropdown with 3 categories, Contact), mobile hamburger menu, footer with copyright '2026 Zevrian Global LLC. All rights reserved. Located in Sheridan, Wyoming, USA.', footer links to Privacy Policy and Terms of Service, script tags",
+    "Create zevrian-site/index.html (Homepage): Hero section with headline about premium lifestyle products and 'Shop Now' CTA, brand story/vision section, featured products grid (6 items pulled from products.js), newsletter subscription form with email validation",
+    "Create zevrian-site/shop/index.html (Main Shop page): Page header, 3 category cards linking to sub-pages, full product grid of all 18 products with filter/sort UI placeholder",
+    "Create zevrian-site/shop/kitchen-dining/index.html: Category hero, 6 product cards for Kitchen & Dining category",
+    "Create zevrian-site/shop/home-organization/index.html: Category hero, 6 product cards for Home Organization category",
+    "Create zevrian-site/shop/travel-outdoor/index.html: Category hero, 6 product cards for Travel & Outdoor category",
+    "Create zevrian-site/contact/index.html: Page with two distinct form sections - Customer Support Form (name, email, order number, subject, message) and Supplier/Partner Form (company name, contact name, email, phone, message, type of inquiry dropdown). Display corporate address: 30 N Gould St Ste N, Sheridan, WY 82801. Both forms with client-side validation and success toast notifications.",
+    "Create zevrian-site/privacy-policy/index.html: Standard privacy policy page referencing Zevrian Global LLC, Wyoming jurisdiction, standard sections (information collection, use, sharing, cookies, security, contact)",
+    "Create zevrian-site/terms-of-service/index.html: Standard terms page referencing Zevrian Global LLC, Wyoming jurisdiction, standard sections (acceptance, use license, product purchases, disclaimers, limitations, governing law)",
+    "Create zevrian-site/404.html: Custom 404 page with brand styling, message, and link back to homepage"
+  ],
+  "acceptance_criteria": [
+    "All directories exist under zevrian-site/",
+    "CSS file contains complete design system with all specified colors as custom properties",
+    "products.js contains all 18 products with complete data fields",
+    "All HTML pages have consistent navigation with working links between pages",
+    "Logo SVG renders in the header of every page",
+    "Footer on every page shows exact copyright text specified",
+    "All JS files pass syntax validation via node -c",
+    "Contact page has two separate forms with validation",
+    "Homepage has hero, brand story, featured products grid, and newsletter form",
+    "Shop pages render product cards with names, prices, ratings, and Buy on Amazon + Buy Direct buttons",
+    "Product cards have 'Buy on Amazon' as primary CTA and 'Buy Direct' as secondary CTA triggering checkout modal",
+    "Checkout modal has Stripe-style card inputs and PayPal option"
+  ],
+  "verification": [
+    "Run: find /projects/sandbox/zevrian-site -name '*.html' | sort - verify all expected HTML files exist",
+    "Run: node --check /projects/sandbox/zevrian-site/js/products.js && node --check /projects/sandbox/zevrian-site/js/main.js && node --check /projects/sandbox/zevrian-site/js/cart.js - verify no JS syntax errors",
+    "Run: grep -l 'Zevrian Global LLC' /projects/sandbox/zevrian-site/**/*.html - verify corporate name present in relevant pages",
+    "Run: grep '#0F1A2E' /projects/sandbox/zevrian-site/css/styles.css && grep '#C9A96E' /projects/sandbox/zevrian-site/css/styles.css - verify design system colors"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}
