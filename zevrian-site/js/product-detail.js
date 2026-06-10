@@ -188,7 +188,7 @@
 
     // Action buttons
     html += '<div class="product-detail-actions">';
-    html += '<a href="https://amazon.com/dp/PLACEHOLDER" class="btn btn-primary btn-lg btn-amazon-detail" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
+    html += '<a href="' + (product.amazonUrl || 'https://www.amazon.com/dp/PLACEHOLDER_ASIN') + '" class="btn btn-primary btn-lg btn-amazon-detail" target="_blank" rel="noopener noreferrer">Buy on Amazon</a>';
     html += '<button class="btn btn-secondary btn-lg btn-buy-direct-detail" data-product-id="' + product.id + '">Buy Direct</button>';
     html += '</div>';
 

@@ -178,7 +178,14 @@
 
       var amazonBtn = e.target.closest('.btn-amazon');
       if (amazonBtn) {
-        showToast('Redirecting to Amazon...', 'info');
+        var productId = amazonBtn.getAttribute('data-product-id');
+        var products = window.zevProducts;
+        if (products) {
+          var product = products.find(function(p) { return p.id === productId; });
+          if (product && product.amazonUrl) {
+            window.open(product.amazonUrl, '_blank', 'noopener,noreferrer');
+          }
+        }
       }
     });
   }

@@ -17,7 +17,8 @@ const products = [
       "Compatible with all stovetop types including induction"
     ],
     rating: 4.8,
-    reviewCount: 234
+    reviewCount: 234,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "bamboo-magnetic-knife-block",
@@ -34,7 +35,8 @@ const products = [
       "Natural antimicrobial bamboo surface"
     ],
     rating: 4.7,
-    reviewCount: 189
+    reviewCount: 189,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "insulated-french-press",
@@ -51,7 +53,8 @@ const products = [
       "Dishwasher safe for easy cleaning"
     ],
     rating: 4.9,
-    reviewCount: 312
+    reviewCount: 312,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "minimalist-ceramic-dinner-set",
@@ -68,7 +71,8 @@ const products = [
       "Stackable design for efficient storage"
     ],
     rating: 4.6,
-    reviewCount: 156
+    reviewCount: 156,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "silicone-cooking-utensil-set",
@@ -85,7 +89,8 @@ const products = [
       "Non-scratch safe for all cookware surfaces"
     ],
     rating: 4.8,
-    reviewCount: 278
+    reviewCount: 278,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "double-wall-espresso-cups",
@@ -102,7 +107,8 @@ const products = [
       "Set of 4 cups in gift-ready packaging"
     ],
     rating: 4.7,
-    reviewCount: 203
+    reviewCount: 203,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   // Home Organization
   {
@@ -120,7 +126,8 @@ const products = [
       "Weighted base prevents sliding"
     ],
     rating: 4.8,
-    reviewCount: 167
+    reviewCount: 167,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "stackable-linen-storage-bins",
@@ -137,7 +144,8 @@ const products = [
       "Collapsible flat for storage when not in use"
     ],
     rating: 4.7,
-    reviewCount: 245
+    reviewCount: 245,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "magnetic-cable-management-tray",
@@ -154,7 +162,8 @@ const products = [
       "Compatible with desks up to 1.5 inches thick"
     ],
     rating: 4.6,
-    reviewCount: 198
+    reviewCount: 198,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "floating-wall-shelf-matte-black",
@@ -171,7 +180,8 @@ const products = [
       "Includes all mounting hardware and level template"
     ],
     rating: 4.8,
-    reviewCount: 221
+    reviewCount: 221,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "felt-drawer-dividers",
@@ -188,7 +198,8 @@ const products = [
       "Machine washable for easy maintenance"
     ],
     rating: 4.9,
-    reviewCount: 334
+    reviewCount: 334,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "acrylic-display-riser-set",
@@ -205,7 +216,8 @@ const products = [
       "Each riser supports up to 15 lbs"
     ],
     rating: 4.5,
-    reviewCount: 142
+    reviewCount: 142,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   // Travel & Outdoor
   {
@@ -223,7 +235,8 @@ const products = [
       "Leak-proof dual-lid system (sports cap + screw top)"
     ],
     rating: 4.9,
-    reviewCount: 456
+    reviewCount: 456,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "hardshell-tech-organizer-case",
@@ -240,7 +253,8 @@ const products = [
       "Compact 9x6x3 inch dimensions fit any bag"
     ],
     rating: 4.7,
-    reviewCount: 189
+    reviewCount: 189,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "packable-daypack-ripstop-nylon",
@@ -257,7 +271,8 @@ const products = [
       "Breathable mesh back panel and padded straps"
     ],
     rating: 4.8,
-    reviewCount: 267
+    reviewCount: 267,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "compression-packing-cubes",
@@ -274,7 +289,8 @@ const products = [
       "Laundry bag mode with waterproof lining on one side"
     ],
     rating: 4.8,
-    reviewCount: 345
+    reviewCount: 345,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "collapsible-silicone-travel-mug",
@@ -291,7 +307,8 @@ const products = [
       "Heat resistant up to 230C, dishwasher safe"
     ],
     rating: 4.6,
-    reviewCount: 178
+    reviewCount: 178,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   },
   {
     id: "rfid-blocking-passport-wallet",
@@ -308,7 +325,8 @@ const products = [
       "Pen loop and SIM card slot for travel essentials"
     ],
     rating: 4.7,
-    reviewCount: 223
+    reviewCount: 223,
+    amazonUrl: "https://www.amazon.com/dp/PLACEHOLDER_ASIN"
   }
 ];
 
