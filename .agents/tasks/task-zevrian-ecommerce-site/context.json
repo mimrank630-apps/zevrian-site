@@ -1,0 +1,30 @@
+{
+  "project_type": "Static e-commerce website - pure HTML/CSS/JS, no build step",
+  "language": "HTML, CSS, JavaScript (vanilla)",
+  "build_system": "None - pure static files ready to deploy directly to Cloudflare Pages",
+  "test_framework": "Manual browser testing - static site with no test runner",
+  "build_command": "N/A - no build step needed",
+  "test_command": "Validate HTML structure exists and JS has no syntax errors: node -c for JS files",
+  "verification_instructions": "1. Verify all HTML files exist at expected paths. 2. Check JS files for syntax errors via node -c. 3. Verify directory structure follows Cloudflare Pages clean URL conventions.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "No setup needed - greenfield static site project",
+  "environment_constraints": "INTEGRATIONS_ONLY network mode - NO npm install, no package downloads, no CDN fetches at build time. Must use plain HTML/CSS/JS. Google Fonts can be loaded via link tag in HTML (runtime browser fetch). No Tailwind CLI, no PostCSS, no build tools.",
+  "contribution_requirements": "N/A - greenfield project",
+  "key_patterns": "Directory-based routing for Cloudflare Pages clean URLs (e.g., /shop/index.html serves as /shop). All CSS in a single stylesheet. JS modularized by concern. Inline SVG for logo. Product data stored in a JS data file.",
+  "relevant_files": [
+    "zevrian-site/index.html",
+    "zevrian-site/css/styles.css",
+    "zevrian-site/js/main.js",
+    "zevrian-site/js/products.js",
+    "zevrian-site/js/cart.js",
+    "zevrian-site/shop/index.html",
+    "zevrian-site/shop/kitchen-dining/index.html",
+    "zevrian-site/shop/home-organization/index.html",
+    "zevrian-site/shop/travel-outdoor/index.html",
+    "zevrian-site/contact/index.html",
+    "zevrian-site/privacy-policy/index.html",
+    "zevrian-site/terms-of-service/index.html",
+    "zevrian-site/404.html"
+  ],
+  "directory_structure": "zevrian-site/ at workspace root. index.html at root. /css/ for styles, /js/ for scripts, /images/ for placeholder assets. Each page in its own directory with index.html for clean URLs. /shop/ has category subdirectories and /product/ subdirectory for individual product pages."
+}

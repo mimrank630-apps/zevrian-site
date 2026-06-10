@@ -1,0 +1,30 @@
+{
+  "id": "FEAT-002",
+  "type": "feat",
+  "description": "Create individual product detail pages for all 18 products with full layout including image placeholder, description, features list, pricing, star ratings, Buy on Amazon button, Buy Direct button with checkout modal integration, and related products section.",
+  "status": "completed",
+  "steps": [
+    "Create zevrian-site/js/product-detail.js: Script that reads the product slug from the page (via data attribute or path), finds the product in the products array, and renders the full product detail page content dynamically. Includes: large image placeholder with brand-colored gradient backgrounds, product title, price, star rating with review count, feature bullet points, 'Buy on Amazon' primary button (links to https://amazon.com/dp/PLACEHOLDER), 'Buy Direct' secondary button (triggers checkout modal from cart.js), quantity selector, related products carousel (3-4 items from same category)",
+    "Create zevrian-site/shop/product/index.html: A template product detail page that loads product-detail.js. The page uses URL query parameters (?id=product-slug) to determine which product to display. Includes breadcrumb navigation (Home > Shop > Category > Product Name)",
+    "Ensure the product cards on shop pages and homepage link to the product detail page with the correct query parameter",
+    "Ensure the checkout modal works correctly when triggered from the product detail page Buy Direct button - should pre-fill the product name and price",
+    "Add product-specific meta tags (og:title, og:description) that are populated by JavaScript for SEO-friendliness"
+  ],
+  "acceptance_criteria": [
+    "Product detail page at /shop/product/?id=precision-pour-over-coffee-kettle renders full product info",
+    "All 18 product slugs render correctly when passed as id parameter",
+    "Buy on Amazon button links to amazon.com placeholder URL",
+    "Buy Direct button opens checkout modal with product pre-filled",
+    "Related products section shows other items from the same category",
+    "Breadcrumb navigation shows correct hierarchy",
+    "Product detail JS file passes syntax check via node --check",
+    "Product cards on shop pages and homepage link to correct product detail URLs"
+  ],
+  "verification": [
+    "Run: node --check /projects/sandbox/zevrian-site/js/product-detail.js - verify no syntax errors",
+    "Run: grep -c 'product-detail' /projects/sandbox/zevrian-site/shop/product/index.html - verify product detail script is referenced",
+    "Run: grep 'Buy on Amazon' /projects/sandbox/zevrian-site/shop/product/index.html || grep 'Buy on Amazon' /projects/sandbox/zevrian-site/js/product-detail.js - verify Amazon CTA exists"
+  ],
+  "blocked_reason": null,
+  "findings": "All files created successfully. product-detail.js renders dynamically from URL query param (?id=slug), supports all 18 products, includes breadcrumb, star rating, features list with checkmarks, quantity selector, Buy on Amazon link, Buy Direct button with checkout modal integration, and related products (3 from same category). Global functions (renderStarRating, formatPrice, openCheckoutModal) are available from main.js and cart.js. CSS adds responsive product detail layout (side-by-side on desktop, stacked on mobile). NODE_OPTIONS=\"\" required for node --check validation."
+}
