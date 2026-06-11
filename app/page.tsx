@@ -8,6 +8,7 @@ import { NewsletterCapture } from '@/components/sections/NewsletterCapture'
 import { JsonLd } from '@/components/seo/JsonLd'
 import { Button } from '@/components/ui/button'
 import { buildPageMetadata } from '@/lib/metadata'
+import { AMAZON_STORE_URL, hasAmazonStore } from '@/lib/amazon'
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Home | ZEVRIAN — Premium Essentials for Modern Life',
@@ -16,7 +17,6 @@ export const metadata: Metadata = buildPageMetadata({
   path: '/',
 })
 
-const AMAZON_STORE_URL = process.env.AMAZON_STORE_URL ?? 'https://www.amazon.com/stores/ZEVRIAN'
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevrian.com'
 
 const organizationSchema = {
@@ -36,7 +36,7 @@ const organizationSchema = {
     contactType: 'customer service',
     email: 'info@zevrian.com',
   },
-  sameAs: [AMAZON_STORE_URL],
+  sameAs: AMAZON_STORE_URL ? [AMAZON_STORE_URL] : [],
 }
 
 const TRUST_PILLARS = [

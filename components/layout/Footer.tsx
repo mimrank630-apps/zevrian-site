@@ -1,39 +1,37 @@
 import Link from 'next/link'
 import { NewsletterCapture } from '@/components/sections/NewsletterCapture'
+import { AMAZON_STORE_URL, hasAmazonStore } from '@/lib/amazon'
 
-const NAV_GROUPS = [
-  {
-    label: 'Company',
-    links: [
-      { href: '/about', label: 'About' },
-      { href: '/brand', label: 'Brand' },
-      { href: '/amazon-excellence', label: 'Amazon Excellence' },
-      { href: '/quality', label: 'Quality Assurance' },
-      { href: '/vision', label: 'Future Vision' },
-    ],
-  },
-  {
-    label: 'Work With Us',
-    links: [
-      { href: '/suppliers', label: 'Suppliers & Partners' },
-      { href: '/contact', label: 'Contact' },
-    ],
-  },
-  {
-    label: 'Shop',
-    links: [
-      { href: '/products', label: 'Product Categories' },
-      {
-        href: process.env.AMAZON_STORE_URL ?? 'https://www.amazon.com/stores/ZEVRIAN',
-        label: 'Zevrian Direct on Amazon',
-        external: true,
-      },
-    ],
-  },
+type NavLink = { href: string; label: string; external?: boolean }
+
+const COMPANY_LINKS: NavLink[] = [
+  { href: '/about', label: 'About' },
+  { href: '/brand', label: 'Brand' },
+  { href: '/amazon-excellence', label: 'Amazon Excellence' },
+  { href: '/quality', label: 'Quality Assurance' },
+  { href: '/vision', label: 'Future Vision' },
+]
+
+const WORK_LINKS: NavLink[] = [
+  { href: '/suppliers', label: 'Suppliers & Partners' },
+  { href: '/contact', label: 'Contact' },
 ]
 
 export function Footer() {
   const year = new Date().getFullYear()
+
+  const shopLinks: NavLink[] = [
+    { href: '/products', label: 'Product Categories' },
+    ...(hasAmazonStore
+      ? [{ href: AMAZON_STORE_URL!, label: 'Zevrian Direct on Amazon', external: true }]
+      : []),
+  ]
+
+  const NAV_GROUPS = [
+    { label: 'Company', links: COMPANY_LINKS },
+    { label: 'Work With Us', links: WORK_LINKS },
+    { label: 'Shop', links: shopLinks },
+  ]
 
   return (
     <footer className="bg-charcoal text-white border-t border-white/10 pt-16 pb-8">
@@ -59,7 +57,7 @@ export function Footer() {
               <ul className="flex flex-col gap-2.5">
                 {group.links.map((link) => (
                   <li key={link.href}>
-                    {'external' in link && link.external ? (
+                    {link.external ? (
                       <a
                         href={link.href}
                         target="_blank"

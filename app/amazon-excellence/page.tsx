@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { CheckCircle, Truck, Shield, Users, ArrowRight } from 'lucide-react'
 import { SectionHeading } from '@/components/sections/SectionHeading'
 import { FaqAccordion, type FaqItem } from '@/components/sections/FaqAccordion'
 import { Button } from '@/components/ui/button'
 import { buildPageMetadata } from '@/lib/metadata'
+import { AMAZON_STORE_URL, hasAmazonStore } from '@/lib/amazon'
 
 export const metadata: Metadata = buildPageMetadata({
   title: 'Amazon Excellence | ZEVRIAN — Premium Essentials for Modern Life',
   description: 'Discover how Zevrian Direct leverages Amazon FBA to deliver premium consumer essentials with fast shipping, quality control, and a world-class fulfillment infrastructure.',
   path: '/amazon-excellence',
 })
-
-const AMAZON_STORE_URL = process.env.AMAZON_STORE_URL ?? 'https://www.amazon.com/stores/ZEVRIAN'
 
 const FAQ_ITEMS: FaqItem[] = [
   {
@@ -77,11 +77,17 @@ export default function AmazonExcellencePage() {
           <p className="text-gray-300 text-lg leading-relaxed mb-8">
             Zevrian Direct is our official Amazon store — powered by Amazon FBA to deliver a premium purchase experience for every customer, every time.
           </p>
-          <Button asChild size="lg">
-            <a href={AMAZON_STORE_URL} target="_blank" rel="noopener noreferrer">
-              Visit Zevrian Direct on Amazon
-            </a>
-          </Button>
+          {hasAmazonStore ? (
+            <Button asChild size="lg">
+              <a href={AMAZON_STORE_URL!} target="_blank" rel="noopener noreferrer">
+                Visit Zevrian Direct on Amazon
+              </a>
+            </Button>
+          ) : (
+            <Button asChild variant="outline" size="lg">
+              <Link href="/contact">Inquire About Wholesale</Link>
+            </Button>
+          )}
         </div>
       </section>
 
@@ -134,11 +140,17 @@ export default function AmazonExcellencePage() {
           <p className="text-gray-400 text-sm mb-8">
             Browse the full ZEVRIAN range on Amazon and experience premium essentials delivered through the world&apos;s most trusted fulfillment network.
           </p>
-          <Button asChild size="lg">
-            <a href={AMAZON_STORE_URL} target="_blank" rel="noopener noreferrer">
-              Shop Zevrian Direct on Amazon <ArrowRight className="w-4 h-4 ml-2" />
-            </a>
-          </Button>
+          {hasAmazonStore ? (
+            <Button asChild size="lg">
+              <a href={AMAZON_STORE_URL!} target="_blank" rel="noopener noreferrer">
+                Shop Zevrian Direct on Amazon <ArrowRight className="w-4 h-4 ml-2" />
+              </a>
+            </Button>
+          ) : (
+            <Button asChild size="lg">
+              <Link href="/suppliers">Become a Supply Partner <ArrowRight className="w-4 h-4 ml-2" /></Link>
+            </Button>
+          )}
         </div>
       </section>
     </div>
