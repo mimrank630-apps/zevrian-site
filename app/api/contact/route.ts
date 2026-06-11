@@ -4,6 +4,8 @@ import { checkRateLimit } from '@/lib/rate-limit'
 import { resendClient } from '@/lib/resend'
 import { buildEmailHtml, buildEmailText } from '@/lib/email-templates'
 
+export const runtime = 'edge'
+
 function getClientIp(request: NextRequest): string {
   const forwarded = request.headers.get('x-forwarded-for')
   if (forwarded) {

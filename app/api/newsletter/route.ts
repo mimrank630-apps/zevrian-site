@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server'
 import { NewsletterSchema } from '@/lib/validations'
 import { resendClient } from '@/lib/resend'
 
+export const runtime = 'edge'
+
 export async function POST(request: NextRequest) {
   // 1. Parse and validate
   let body: unknown
