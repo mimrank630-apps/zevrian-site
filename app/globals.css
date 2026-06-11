@@ -1,0 +1,91 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  /* ─── Zevrian Design System — Light Theme ─── */
+  :root {
+    /* Semantic colour tokens */
+    --bg-primary: #FFFFFF;
+    --bg-surface: #F5F5F5;
+    --text-primary: #0F0F0F;
+    --text-muted: #6B7280;
+    --border-color: #E5E7EB;
+
+    /* shadcn/ui HSL tokens — Light */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 6%;
+    --primary: 0 0% 6%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 6%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+    --accent: 42 51% 51%;
+    --accent-foreground: 0 0% 6%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 42 51% 51%;
+    --radius: 0.5rem;
+  }
+
+  /* ─── Zevrian Design System — Dark Theme ─── */
+  .dark {
+    /* Semantic colour tokens */
+    --bg-primary: #0F0F0F;
+    --bg-surface: #1A1A1A;
+    --text-primary: #F5F5F5;
+    --text-muted: #9CA3AF;
+    --border-color: #2A2A2A;
+
+    /* shadcn/ui HSL tokens — Dark */
+    --background: 0 0% 6%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 6%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 6%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 64%;
+    --accent: 42 51% 51%;
+    --accent-foreground: 0 0% 6%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 16%;
+    --input: 0 0% 16%;
+    --ring: 42 51% 51%;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    font-size: 1rem;
+    line-height: 1.75;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ─── Global Focus Indicator (WCAG 2.1 AA, 2px gold outline) ─── */
+  :focus-visible {
+    outline: 2px solid #C6A43F;
+    outline-offset: 2px;
+  }
+}
