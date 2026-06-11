@@ -37,7 +37,7 @@ const FAQ_ITEMS: FaqItem[] = [
   {
     id: 'faq-5',
     question: 'What if I have an issue with a ZEVRIAN order?',
-    answer: "As an Amazon seller, all orders placed through Zevrian Direct on Amazon are protected by Amazon's standard buyer guarantee. You can raise any issue directly through the Amazon order management system, or contact us at hello@zevriangloba.com for assistance.",
+    answer: "As an Amazon seller, all orders placed through Zevrian Direct on Amazon are protected by Amazon's standard buyer guarantee. You can raise any issue directly through the Amazon order management system, or contact us at info@zevrian.com for assistance.",
   },
 ]
 

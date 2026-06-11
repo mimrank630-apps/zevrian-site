@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevriangloba.com'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevrian.com'
 
 export const baseMetadata: Metadata = {
   metadataBase: new URL(siteUrl),

@@ -98,10 +98,10 @@ export function Footer() {
               Terms of Service
             </Link>
             <a
-              href="mailto:hello@zevriangloba.com"
+              href="mailto:info@zevrian.com"
               className="hover:text-gold transition-colors"
             >
-              hello@zevriangloba.com
+              info@zevrian.com
             </a>
           </div>
         </div>

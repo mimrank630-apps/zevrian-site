@@ -73,7 +73,7 @@ export default function PrivacyPolicyPage() {
           For privacy-related inquiries, please contact:<br />
           Zevrian Global LLC<br />
           Sheridan, Wyoming, USA<br />
-          Email: <a href="mailto:hello@zevriangloba.com">hello@zevriangloba.com</a>
+          Email: <a href="mailto:info@zevrian.com">info@zevrian.com</a>
         </p>
       </section>
     </div>

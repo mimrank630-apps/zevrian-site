@@ -109,7 +109,7 @@ export function ContactForm() {
       {state === 'error' && (
         <p className="text-sm text-red-500">
           Something went wrong. Please retry or email us at{' '}
-          <a href="mailto:hello@zevriangloba.com" className="underline">hello@zevriangloba.com</a>.
+          <a href="mailto:info@zevrian.com" className="underline">info@zevrian.com</a>.
         </p>
       )}
 

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   description:
     'Zevrian Global LLC is a premium consumer goods company delivering quality essentials for modern living through Amazon FBA and private label expansion.',
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevriangloba.com'
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevrian.com'
   ),
 }
 

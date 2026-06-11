@@ -17,7 +17,7 @@ export const metadata: Metadata = buildPageMetadata({
 })
 
 const AMAZON_STORE_URL = process.env.AMAZON_STORE_URL ?? 'https://www.amazon.com/stores/ZEVRIAN'
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevriangloba.com'
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://zevrian.com'
 
 const organizationSchema = {
   '@context': 'https://schema.org',
@@ -34,7 +34,7 @@ const organizationSchema = {
   contactPoint: {
     '@type': 'ContactPoint',
     contactType: 'customer service',
-    email: 'hello@zevriangloba.com',
+    email: 'info@zevrian.com',
   },
   sameAs: [AMAZON_STORE_URL],
 }

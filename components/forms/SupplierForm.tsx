@@ -75,7 +75,7 @@ export function SupplierForm() {
       </div>
       {state === 'error' && (
         <p className="text-sm text-red-500">
-          Something went wrong. Please retry or email <a href="mailto:hello@zevriangloba.com" className="underline">hello@zevriangloba.com</a>.
+          Something went wrong. Please retry or email <a href="mailto:info@zevrian.com" className="underline">info@zevrian.com</a>.
         </p>
       )}
       <Button type="submit" disabled={state === 'submitting'} className="w-full sm:w-auto" aria-label="Submit supplier inquiry">

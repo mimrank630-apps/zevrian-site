@@ -72,8 +72,8 @@ export async function POST(request: NextRequest) {
   // 4. Send via Resend
   try {
     const { error } = await resendClient.emails.send({
-      from: 'ZEVRIAN Contact <noreply@zevriangloba.com>',
-      to: [process.env.CONTACT_EMAIL_TO ?? 'hello@zevriangloba.com'],
+      from: 'ZEVRIAN Contact <noreply@zevrian.com>',
+      to: [process.env.CONTACT_EMAIL_TO ?? 'info@zevrian.com'],
       subject,
       html: buildEmailHtml(ctx),
       text: buildEmailText(ctx),

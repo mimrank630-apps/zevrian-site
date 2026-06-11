@@ -104,8 +104,8 @@ export function NewsletterCapture({ compact = false, className }: NewsletterCapt
       {state === 'error' && (
         <p className="mt-2 text-xs text-red-400">
           Something went wrong. Please try again or email us at{' '}
-          <a href="mailto:hello@zevriangloba.com" className="underline">
-            hello@zevriangloba.com
+          <a href="mailto:info@zevrian.com" className="underline">
+            info@zevrian.com
           </a>
           .
         </p>

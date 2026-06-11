@@ -42,8 +42,8 @@ export default function ContactPage() {
             <Mail className="w-5 h-5 text-gold shrink-0" />
             <div>
               <p className="text-xs font-semibold uppercase tracking-widest text-[--text-muted] mb-0.5">Email</p>
-              <a href="mailto:hello@zevriangloba.com" className="text-sm font-medium text-gold hover:text-gold-hover transition-colors">
-                hello@zevriangloba.com
+              <a href="mailto:info@zevrian.com" className="text-sm font-medium text-gold hover:text-gold-hover transition-colors">
+                info@zevrian.com
               </a>
             </div>
           </div>
