@@ -8,7 +8,22 @@ export const metadata: Metadata = {
   title: "Brand",
   description:
     "The Zevrian brand identity — logo, color system, typography, and the philosophy behind our luxury minimalist design.",
+  keywords: [
+    "Zevrian brand",
+    "brand identity",
+    "logo design",
+    "color system",
+    "typography",
+    "luxury minimalist design",
+  ],
   alternates: { canonical: "/brand" },
+  openGraph: {
+    title: "Brand — Zevrian",
+    description:
+      "The Zevrian brand identity — logo, color system, typography, and design philosophy.",
+    url: `${siteConfig.url}/brand`,
+    type: "website",
+  },
 };
 
 const palette = [

@@ -3,7 +3,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Container } from "@/components/ui/Container";
 import { ProductImage } from "@/components/ui/ProductImage";
-import { RatingStars } from "@/components/ui/RatingStars";
 import { AmazonButton } from "@/components/ui/AmazonButton";
 import { BuyDirectButton } from "@/components/BuyDirectButton";
 import { ProductCard } from "@/components/ProductCard";
@@ -15,6 +14,7 @@ import {
   products,
 } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript, productJsonLd } from "@/lib/seo";
 
 export function generateStaticParams() {
   return products.map((p) => ({ slug: p.slug }));
@@ -59,33 +59,26 @@ export default async function ProductDetailPage({
   const category = getCategory(product.category);
   const related = getRelatedProducts(product, 3);
 
-  const productJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "Product",
-    name: product.name,
-    description: product.description,
-    brand: { "@type": "Brand", name: siteConfig.name },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: product.rating,
-      reviewCount: product.reviewCount,
-    },
-    offers: {
-      "@type": "Offer",
-      price: product.price.toFixed(2),
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
-      url: product.amazonUrl,
-      seller: { "@type": "Organization", name: siteConfig.amazonStoreName },
-    },
-  };
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    ...(category
+      ? [{ name: category.name, path: `/products?category=${category.slug}` }]
+      : []),
+    { name: product.name, path: `/products/${product.slug}` },
+  ]);
 
   return (
     <>
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+        dangerouslySetInnerHTML={jsonLdScript(productJsonLd(product))}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={jsonLdScript(breadcrumb)}
       />
 
       {/* Breadcrumb */}
@@ -146,10 +139,6 @@ export default async function ProductDetailPage({
               <h1 className="mt-3 text-3xl font-semibold tracking-tight text-charcoal-900 sm:text-4xl">
                 {product.name}
               </h1>
-
-              <div className="mt-4">
-                <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
-              </div>
 
               <div className="mt-5 flex items-baseline gap-3">
                 <span className="text-3xl font-semibold text-charcoal-900">

@@ -10,12 +10,30 @@ import {
 } from "@/lib/products";
 import type { CategorySlug } from "@/lib/types";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbJsonLd, itemListJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse the full Zevrian catalog — premium kitchen, home organization, and travel essentials, available on Amazon under Zevrian Direct.",
+    "Browse the full Zevrian catalog — premium kitchen, dining, home organization, office, everyday, and travel essentials, available on Amazon under Zevrian Direct.",
+  keywords: [
+    "Zevrian products",
+    "premium kitchen tools",
+    "home organization",
+    "travel essentials",
+    "office products",
+    "everyday essentials",
+    "Amazon FBA brand",
+    "private label lifestyle products",
+  ],
   alternates: { canonical: "/products" },
+  openGraph: {
+    title: "Products — Zevrian",
+    description:
+      "The full Zevrian catalog of precision-engineered essentials, available on Amazon under Zevrian Direct.",
+    url: `${siteConfig.url}/products`,
+    type: "website",
+  },
 };
 
 // This page reads searchParams (category filter), making it dynamic.
@@ -40,8 +58,27 @@ export default async function ProductsPage({
   const list =
     active === "all" ? products : getProductsByCategory(active);
 
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "Products", path: "/products" },
+    ...(activeCategory
+      ? [{ name: activeCategory.name, path: `/products?category=${activeCategory.slug}` }]
+      : []),
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={jsonLdScript(itemListJsonLd(list))}
+      />
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={jsonLdScript(breadcrumb)}
+      />
+
       {/* Header */}
       <section className="border-b border-charcoal-100 bg-charcoal-50 py-16 sm:py-20">
         <Container>

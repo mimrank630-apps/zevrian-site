@@ -8,7 +8,21 @@ export const metadata: Metadata = {
   title: "Contact",
   description:
     "Get in touch with Zevrian Global LLC. Customer support for product questions, and a dedicated intake for suppliers and manufacturing partners.",
+  keywords: [
+    "contact Zevrian",
+    "customer support",
+    "supplier inquiry",
+    "manufacturing partner",
+    "Zevrian Global LLC contact",
+  ],
   alternates: { canonical: "/contact" },
+  openGraph: {
+    title: "Contact — Zevrian",
+    description:
+      "Contact Zevrian Global LLC — customer support and supplier/partner inquiries.",
+    url: `${siteConfig.url}/contact`,
+    type: "website",
+  },
 };
 
 export default function ContactPage() {

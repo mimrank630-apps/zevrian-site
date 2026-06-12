@@ -8,7 +8,22 @@ export const metadata: Metadata = {
   title: "About",
   description:
     "The story, mission, and roadmap behind Zevrian Global LLC — a focused private-label brand building premium everyday essentials.",
+  keywords: [
+    "Zevrian about",
+    "brand story",
+    "Zevrian Global LLC",
+    "private label brand",
+    "Wyoming LLC",
+    "Amazon FBA brand",
+  ],
   alternates: { canonical: "/about" },
+  openGraph: {
+    title: "About — Zevrian",
+    description:
+      "The story, mission, and roadmap behind Zevrian Global LLC — a focused private-label brand.",
+    url: `${siteConfig.url}/about`,
+    type: "website",
+  },
 };
 
 const values = [

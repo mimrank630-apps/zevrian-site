@@ -66,7 +66,6 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-amber-100 via-stone-100 to-stone-200",
-    badge: "Best Seller",
   },
   {
     slug: "bamboo-magnetic-knife-block",
@@ -227,7 +226,6 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-amber-100 via-orange-50 to-stone-300",
-    badge: "Best Seller",
   },
   {
     slug: "stackable-linen-storage-bins",
@@ -387,7 +385,6 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-teal-50 via-slate-100 to-slate-300",
-    badge: "Best Seller",
   },
   {
     slug: "hardshell-tech-organizer-case",
@@ -547,7 +544,6 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-zinc-100 via-neutral-100 to-zinc-300",
-    badge: "Best Seller",
   },
   {
     slug: "braided-cable-organizer-set",
@@ -681,7 +677,6 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-zinc-100 via-neutral-200 to-zinc-300",
-    badge: "Best Seller",
   },
   {
     slug: "under-desk-cable-tray",
@@ -821,20 +816,4 @@ export function formatPrice(value: number): string {
     style: "currency",
     currency: "USD",
   }).format(value);
-}
-
-/**
- * Aggregate, honest social-proof stats computed from the live catalog.
- * No fabricated testimonials — only derived numbers.
- */
-export function getCatalogStats() {
-  const totalReviews = products.reduce((sum, p) => sum + p.reviewCount, 0);
-  const avgRating =
-    products.reduce((sum, p) => sum + p.rating, 0) / products.length;
-  return {
-    productCount: products.length,
-    categoryCount: categories.length,
-    totalReviews,
-    avgRating: Math.round(avgRating * 10) / 10,
-  };
 }

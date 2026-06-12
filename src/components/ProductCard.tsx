@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Product } from "@/lib/types";
 import { formatPrice } from "@/lib/products";
 import { ProductImage } from "@/components/ui/ProductImage";
-import { RatingStars } from "@/components/ui/RatingStars";
 import { AmazonButton } from "@/components/ui/AmazonButton";
 
 export function ProductCard({ product }: { product: Product }) {
@@ -20,9 +19,7 @@ export function ProductCard({ product }: { product: Product }) {
       </Link>
 
       <div className="flex flex-1 flex-col p-5">
-        <RatingStars rating={product.rating} reviewCount={product.reviewCount} />
-
-        <h3 className="mt-3 text-base font-semibold leading-snug text-charcoal-900">
+        <h3 className="text-base font-semibold leading-snug text-charcoal-900">
           <Link
             href={`/products/${product.slug}`}
             className="transition-colors hover:text-gold-600 focus:outline-none focus-visible:underline"

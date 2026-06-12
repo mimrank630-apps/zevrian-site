@@ -8,6 +8,7 @@ import { TrustBar } from "@/components/TrustBar";
 import { BrandPhilosophyStrip } from "@/components/sections/BrandPhilosophyStrip";
 import { AmazonTrustSection } from "@/components/sections/AmazonTrustSection";
 import { SocialProof } from "@/components/sections/SocialProof";
+import { FaqSection } from "@/components/sections/FaqSection";
 import { categories, getFeaturedProducts } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 
@@ -200,6 +201,9 @@ export default function HomePage() {
 
       {/* Social proof */}
       <SocialProof />
+
+      {/* FAQ */}
+      <FaqSection />
 
       {/* Newsletter */}
       <section className="border-t border-charcoal-100 py-20 sm:py-24">
