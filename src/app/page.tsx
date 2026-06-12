@@ -5,6 +5,9 @@ import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { TrustBar } from "@/components/TrustBar";
+import { BrandPhilosophyStrip } from "@/components/sections/BrandPhilosophyStrip";
+import { AmazonTrustSection } from "@/components/sections/AmazonTrustSection";
+import { SocialProof } from "@/components/sections/SocialProof";
 import { categories, getFeaturedProducts } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 
@@ -72,6 +75,9 @@ export default function HomePage() {
       {/* Trust bar */}
       <TrustBar />
 
+      {/* Brand philosophy strip */}
+      <BrandPhilosophyStrip />
+
       {/* Brand story */}
       <section className="py-20 sm:py-28">
         <Container>
@@ -129,8 +135,8 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Collections"
-            title="Three collections, one standard"
-            description="A curated catalog organized around the spaces where good design matters most."
+            title="Five collections, one standard"
+            description="A curated catalog organized around the spaces and moments where good design matters most."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
@@ -189,33 +195,11 @@ export default function HomePage() {
         </Container>
       </section>
 
-      {/* Amazon CTA */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="relative overflow-hidden rounded-3xl bg-charcoal-950 px-8 py-16 text-center sm:px-16 sm:py-20">
-            <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(198,164,63,0.16),_transparent_60%)]" />
-            <div className="relative mx-auto max-w-2xl">
-              <span className="eyebrow text-gold-light">Zevrian Direct</span>
-              <h2 className="mt-4 text-3xl font-semibold tracking-tight text-white text-balance sm:text-4xl">
-                Every Zevrian product, fulfilled by Amazon.
-              </h2>
-              <p className="mt-4 text-base leading-relaxed text-charcoal-300 text-balance">
-                Shop the full range through our {siteConfig.amazonStoreName}{" "}
-                storefront and enjoy fast, reliable fulfillment, easy returns,
-                and buyer protection.
-              </p>
-              <a
-                href={siteConfig.amazonStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-gold mt-8"
-              >
-                Visit our Amazon store
-              </a>
-            </div>
-          </div>
-        </Container>
-      </section>
+      {/* Amazon trust explainer */}
+      <AmazonTrustSection />
+
+      {/* Social proof */}
+      <SocialProof />
 
       {/* Newsletter */}
       <section className="border-t border-charcoal-100 py-20 sm:py-24">

@@ -1,11 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { categories } from "@/lib/products";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const subjects = [
+  "Product question",
+  "Order & shipping",
+  "Returns & refunds",
+  "Product feedback",
+  "Press & partnerships",
+  "Other",
+];
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -68,13 +76,12 @@ export function ContactForm() {
       </div>
 
       <div>
-        <label htmlFor="cs-category" className="field-label">Product category</label>
-        <select id="cs-category" name="category" className="field-input" defaultValue="">
-          <option value="" disabled>Select a category</option>
-          {categories.map((c) => (
-            <option key={c.slug} value={c.name}>{c.name}</option>
+        <label htmlFor="cs-subject" className="field-label">Subject</label>
+        <select id="cs-subject" name="subject" className="field-input" defaultValue="">
+          <option value="" disabled>Select a subject</option>
+          {subjects.map((s) => (
+            <option key={s} value={s}>{s}</option>
           ))}
-          <option value="General">General inquiry</option>
         </select>
       </div>
 

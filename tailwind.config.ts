@@ -41,14 +41,35 @@ const config: Config = {
         },
       },
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        display: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
+        // v6: serif is forbidden. "display" maps to the same system sans stack
+        // so existing utility classes keep working while staying sans-serif.
+        display: [
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "Helvetica Neue",
+          "Arial",
+          "sans-serif",
+        ],
       },
       maxWidth: {
         container: "1280px",
       },
       letterSpacing: {
         luxe: "0.2em",
+        wordmark: "-0.05em",
       },
       animation: {
         "fade-in": "fadeIn 0.7s ease-out forwards",

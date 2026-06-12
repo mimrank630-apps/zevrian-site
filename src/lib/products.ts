@@ -822,3 +822,19 @@ export function formatPrice(value: number): string {
     currency: "USD",
   }).format(value);
 }
+
+/**
+ * Aggregate, honest social-proof stats computed from the live catalog.
+ * No fabricated testimonials — only derived numbers.
+ */
+export function getCatalogStats() {
+  const totalReviews = products.reduce((sum, p) => sum + p.reviewCount, 0);
+  const avgRating =
+    products.reduce((sum, p) => sum + p.rating, 0) / products.length;
+  return {
+    productCount: products.length,
+    categoryCount: categories.length,
+    totalReviews,
+    avgRating: Math.round(avgRating * 10) / 10,
+  };
+}

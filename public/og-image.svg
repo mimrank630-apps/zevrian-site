@@ -1,18 +1,19 @@
 <svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="1200" height="630" fill="#0a0a0a"/>
-  <radialGradient id="glow" cx="50%" cy="32%" r="55%">
-    <stop offset="0%" stop-color="#C6A43F" stop-opacity="0.20"/>
-    <stop offset="100%" stop-color="#0a0a0a" stop-opacity="0"/>
+  <rect width="1200" height="630" fill="#0F0F0F"/>
+  <radialGradient id="glow" cx="50%" cy="34%" r="58%">
+    <stop offset="0%" stop-color="#C6A43F" stop-opacity="0.16"/>
+    <stop offset="100%" stop-color="#0F0F0F" stop-opacity="0"/>
   </radialGradient>
   <rect width="1200" height="630" fill="url(#glow)"/>
 
-  <!-- Monogram -->
-  <g transform="translate(600 200)">
-    <rect x="0" y="-70" width="99" height="99" rx="12" transform="rotate(45 0 -70)" stroke="#C6A43F" stroke-width="3"/>
-    <path d="M-28 -28H28L-28 28H28" stroke="#C6A43F" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Engineered Z mark -->
+  <g transform="translate(545 150)">
+    <path d="M22 22H88L22 88H88" stroke="#FFFFFF" stroke-width="9" stroke-linecap="square" stroke-linejoin="miter"/>
+    <rect x="86" y="16" width="9" height="9" fill="#C6A43F"/>
   </g>
 
-  <text x="600" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="84" font-weight="600" letter-spacing="18" fill="#ffffff">ZEVRIAN</text>
-  <text x="600" y="445" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" letter-spacing="3" fill="#a3a3a3">Considered essentials for modern living</text>
-  <text x="600" y="555" text-anchor="middle" font-family="Arial, sans-serif" font-size="22" letter-spacing="6" fill="#C6A43F">PRIVATE LABEL · AMAZON FBA</text>
+  <text x="600" y="360" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="92" font-weight="700" letter-spacing="-4" fill="#FFFFFF">ZEVRIAN</text>
+  <text x="600" y="430" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="26" letter-spacing="2" fill="#999999">Essentials, designed with intention.</text>
+  <rect x="540" y="486" width="120" height="3" fill="#C6A43F"/>
+  <text x="600" y="540" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="20" letter-spacing="6" fill="#C6A43F">PRIVATE LABEL · AMAZON FBA</text>
 </svg>

@@ -1,10 +1,25 @@
 "use client";
 
 import { useState } from "react";
+import { categories } from "@/lib/products";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+const countries = [
+  "United States",
+  "China",
+  "India",
+  "Vietnam",
+  "Germany",
+  "Italy",
+  "Turkey",
+  "Mexico",
+  "South Korea",
+  "Japan",
+  "Other",
+];
 
 export function SupplierForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -13,7 +28,9 @@ export function SupplierForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries()) as Record<string, string>;
+    const interests = formData.getAll("interest").map(String);
 
     if (!data.company?.trim() || !data.contactName?.trim() || !data.message?.trim()) {
       setStatus("error");
@@ -33,7 +50,7 @@ export function SupplierForm() {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType: "supplier" }),
+        body: JSON.stringify({ ...data, interests, formType: "supplier" }),
       });
       const result = (await res.json().catch(() => ({}))) as {
         message?: string;
@@ -80,13 +97,38 @@ export function SupplierForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="sp-country" className="field-label">Country</label>
-          <input id="sp-country" name="country" className="field-input" placeholder="Country of operation" />
+          <select id="sp-country" name="country" className="field-input" defaultValue="">
+            <option value="" disabled>Select a country</option>
+            {countries.map((c) => (
+              <option key={c} value={c}>{c}</option>
+            ))}
+          </select>
         </div>
         <div>
           <label htmlFor="sp-capabilities" className="field-label">Manufacturing capabilities</label>
           <input id="sp-capabilities" name="capabilities" className="field-input" placeholder="e.g. stainless steel, injection molding" />
         </div>
       </div>
+
+      <fieldset>
+        <legend className="field-label">Product interest</legend>
+        <div className="mt-1 grid gap-2.5 sm:grid-cols-2">
+          {categories.map((c) => (
+            <label
+              key={c.slug}
+              className="flex cursor-pointer items-center gap-2.5 rounded-xl border border-charcoal-200 px-4 py-3 text-sm text-charcoal-600 transition-colors hover:border-charcoal-900 has-[:checked]:border-gold has-[:checked]:bg-gold/5"
+            >
+              <input
+                type="checkbox"
+                name="interest"
+                value={c.name}
+                className="h-4 w-4 accent-gold"
+              />
+              {c.name}
+            </label>
+          ))}
+        </div>
+      </fieldset>
 
       <div>
         <label htmlFor="sp-message" className="field-label">Message *</label>

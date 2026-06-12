@@ -12,10 +12,10 @@ export const metadata: Metadata = {
 };
 
 const palette = [
-  { name: "Charcoal", hex: "#111111", className: "bg-charcoal-900", text: "text-white" },
+  { name: "Charcoal", hex: "#0F0F0F", className: "bg-charcoal-900", text: "text-white" },
   { name: "Gold", hex: "#C6A43F", className: "bg-gold", text: "text-charcoal-900" },
   { name: "Pure White", hex: "#FFFFFF", className: "bg-white border border-charcoal-200", text: "text-charcoal-900" },
-  { name: "Stone", hex: "#F5F5F5", className: "bg-charcoal-50", text: "text-charcoal-900" },
+  { name: "Stone", hex: "#FAFAFA", className: "bg-charcoal-50", text: "text-charcoal-900" },
 ];
 
 export default function BrandPage() {
@@ -43,8 +43,8 @@ export default function BrandPage() {
           <SectionHeading
             align="left"
             eyebrow="The mark"
-            title="The Zevrian logo"
-            description="A faceted Z monogram set within a diamond — a nod to the precision and craft we build into every product. Rendered as inline SVG for perfect clarity at any size."
+            title="The Zevrian wordmark"
+            description="A geometric, capital sans-serif wordmark with tight kerning, paired with an engineered Z mark — square terminals, no curves. It looks like it was designed by an engineer, not a marketing department. Rendered as inline SVG and CSS for perfect clarity at any size."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <div className="flex items-center justify-center rounded-2xl border border-charcoal-100 bg-white p-16">
@@ -89,28 +89,29 @@ export default function BrandPage() {
           <SectionHeading
             align="left"
             eyebrow="Typography"
-            title="Modern sans, classical serif"
-            description="Inter carries the interface with clean, confident legibility. Playfair Display appears sparingly for editorial moments that add warmth and craft."
+            title="System sans-serif, by design"
+            description="Zevrian uses the native system font stack — no web fonts. It loads instantly, renders crisply on every device, and keeps the interface fast. Serif is intentionally avoided: premium minimalism is sans-serif."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <div className="card p-9">
-              <span className="eyebrow">Primary · Inter</span>
-              <p className="mt-4 font-sans text-5xl font-semibold tracking-tight text-charcoal-900">
+              <span className="eyebrow">Display · System Sans (700)</span>
+              <p className="mt-4 font-sans text-5xl font-bold tracking-tight text-charcoal-900">
                 Aa
               </p>
               <p className="mt-4 font-sans text-base leading-relaxed text-charcoal-500">
-                Used for all interface text, headings, and body copy. Chosen for
-                its clarity, neutrality, and excellent screen rendering.
+                Headlines use tight tracking and bold weight for confident,
+                engineered hierarchy. Rendered with the platform&rsquo;s native
+                UI font for zero load cost.
               </p>
             </div>
             <div className="card p-9">
-              <span className="eyebrow">Accent · Playfair Display</span>
-              <p className="mt-4 font-display text-5xl font-medium text-charcoal-900">
+              <span className="eyebrow">Body · System Sans (400)</span>
+              <p className="mt-4 font-sans text-5xl font-normal text-charcoal-900">
                 Aa
               </p>
               <p className="mt-4 font-sans text-base leading-relaxed text-charcoal-500">
-                Reserved for pull quotes and editorial flourishes — a touch of
-                classical elegance against the modern sans-serif base.
+                Body copy stays at 16px or larger with generous line-height for
+                comfortable, accessible reading across long-form content.
               </p>
             </div>
           </div>
