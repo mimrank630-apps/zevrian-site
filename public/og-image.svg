@@ -6,13 +6,13 @@
   </radialGradient>
   <rect width="1200" height="630" fill="url(#glow)"/>
 
-  <!-- Diamond Z monogram -->
-  <g transform="translate(600 170)">
-    <rect x="0" y="-62" width="87.7" height="87.7" rx="10" transform="rotate(45 0 -62)" stroke="#C6A43F" stroke-width="4"/>
-    <path d="M-26 -26H26L-26 26H26" stroke="#C6A43F" stroke-width="5.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Gold tile Z monogram -->
+  <g transform="translate(556 120)">
+    <rect width="88" height="88" rx="24" fill="#C6A43F"/>
+    <path d="M28 31H60L28 57H60" stroke="#0F0F0F" stroke-width="6" stroke-linecap="square" stroke-linejoin="miter"/>
   </g>
 
-  <text x="600" y="380" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="84" font-weight="600" letter-spacing="20" fill="#FFFFFF">ZEVRIAN</text>
-  <text x="600" y="448" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="26" letter-spacing="2" fill="#999999">Essentials, designed with intention.</text>
+  <text x="600" y="380" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="86" font-weight="700" letter-spacing="14" fill="#FFFFFF">ZEVRIAN</text>
+  <text x="600" y="446" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="26" letter-spacing="2" fill="#999999">Essentials, designed with intention.</text>
   <text x="600" y="548" text-anchor="middle" font-family="system-ui, -apple-system, 'Segoe UI', Arial, sans-serif" font-size="20" letter-spacing="6" fill="#C6A43F">PRIVATE LABEL · AMAZON FBA</text>
 </svg>

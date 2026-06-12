@@ -2,20 +2,21 @@ import Link from "next/link";
 
 interface LogoProps {
   className?: string;
-  /** Wordmark color context. The gold mark stays constant. */
+  /** Wordmark color context. The gold tile mark stays constant. */
   variant?: "dark" | "light";
-  /** Show the diamond Z monogram beside the wordmark. */
+  /** Show the gold Z tile beside the wordmark. */
   showMark?: boolean;
   /** Render as a plain element (no link) — e.g. inside the brand showcase. */
   asLink?: boolean;
 }
 
 const GOLD = "#C6A43F";
+const CHARCOAL = "#0F0F0F";
 
 /**
- * ZEVRIAN brand mark — a gold diamond "Z" monogram paired with a spaced,
- * uppercase wordmark. Fully vector (inline SVG + CSS), scales perfectly from
- * favicon to billboard.
+ * ZEVRIAN brand mark — a solid gold "tile" monogram holding a clean geometric
+ * Z, paired with an uppercase wordmark. The tile reads clearly on both light
+ * and dark backgrounds (premium app-icon language). Fully vector / CSS.
  */
 export function Logo({
   className = "",
@@ -27,9 +28,9 @@ export function Logo({
 
   const inner = (
     <span className="inline-flex items-center gap-2.5">
-      {showMark && <DiamondMark className="h-9 w-9 shrink-0" />}
+      {showMark && <TileMark className="h-9 w-9 shrink-0" />}
       <span
-        className={`text-lg font-semibold uppercase tracking-[0.25em] ${wordmarkColor}`}
+        className={`text-lg font-semibold uppercase tracking-[0.18em] ${wordmarkColor}`}
       >
         Zevrian
       </span>
@@ -49,7 +50,7 @@ export function Logo({
   );
 }
 
-function DiamondMark({ className = "" }: { className?: string }) {
+function TileMark({ className = "" }: { className?: string }) {
   return (
     <svg
       viewBox="0 0 40 40"
@@ -58,22 +59,13 @@ function DiamondMark({ className = "" }: { className?: string }) {
       className={className}
       aria-hidden="true"
     >
-      <rect
-        x="20"
-        y="2"
-        width="25.46"
-        height="25.46"
-        rx="4"
-        transform="rotate(45 20 2)"
-        stroke={GOLD}
-        strokeWidth="2"
-      />
+      <rect width="40" height="40" rx="11" fill={GOLD} />
       <path
-        d="M13.5 13.5H26.5L13.5 26.5H26.5"
-        stroke={GOLD}
-        strokeWidth="2.4"
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        d="M13 14H27L13 26H27"
+        stroke={CHARCOAL}
+        strokeWidth="2.8"
+        strokeLinecap="square"
+        strokeLinejoin="miter"
       />
     </svg>
   );
@@ -83,5 +75,5 @@ function DiamondMark({ className = "" }: { className?: string }) {
  * Icon-only mark for tight spaces (avatars, favicons, inline badges).
  */
 export function LogoMark({ className = "" }: { className?: string }) {
-  return <DiamondMark className={className} />;
+  return <TileMark className={className} />;
 }
