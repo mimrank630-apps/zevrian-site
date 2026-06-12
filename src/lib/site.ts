@@ -13,6 +13,10 @@ export const siteConfig = {
   email: "info@zevrian.com",
   amazonStoreName: "Zevrian Direct",
   amazonStoreUrl: "https://www.amazon.com/stores/zevrian",
+  // Placeholder support number — replace with the real WhatsApp business line.
+  whatsappNumber: "15555555555",
+  whatsappUrl:
+    "https://wa.me/15555555555?text=Hi%20Zevrian%2C%20I%20have%20a%20question%20about%20your%20products.",
   address: {
     line1: "30 N Gould St Ste N",
     city: "Sheridan",

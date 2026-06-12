@@ -68,7 +68,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="btn btn-gold !px-5 !py-2.5 text-xs"
           >
-            Shop on Amazon
+            Explore on Amazon
           </a>
         </div>
 
@@ -123,7 +123,7 @@ export function Navbar() {
             rel="noopener noreferrer"
             className="btn btn-gold mt-2"
           >
-            Shop on Amazon
+            Explore on Amazon
           </a>
         </div>
       </div>

@@ -20,7 +20,21 @@ export const categories: Category[] = [
     name: "Travel & Outdoor",
     tagline: "Built for the move.",
     description:
-      "Insulated bottles, structured travel cases, and smart commuter essentials made for life in motion.",
+      "Durable essentials designed for movement, travel, and active lifestyles — from insulated bottles to structured cases.",
+  },
+  {
+    slug: "everyday-essentials",
+    name: "Everyday Essentials",
+    tagline: "Simple, done right.",
+    description:
+      "Simple, high-utility products engineered to a standard, not a price point — the easiest place to start with Zevrian.",
+  },
+  {
+    slug: "office-products",
+    name: "Office Products",
+    tagline: "Focus, by design.",
+    description:
+      "Premium workspace essentials designed for productivity, focus, and modern work-from-anywhere environments.",
   },
 ];
 
@@ -505,6 +519,273 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-stone-200 via-neutral-200 to-stone-400",
+  },
+
+  // ----------------------- Everyday Essentials -----------------------
+  {
+    slug: "adjustable-aluminum-phone-stand",
+    name: "Adjustable Aluminum Phone Stand",
+    category: "everyday-essentials",
+    price: 18.99,
+    rating: 4.7,
+    reviewCount: 612,
+    shortDescription:
+      "Machined aluminum stand that holds your phone at the perfect angle, anywhere.",
+    description:
+      "A precision-machined aluminum phone stand with an adjustable hinge and silicone contact points. Stable enough for video calls, light enough to travel.",
+    features: [
+      "CNC-machined aluminum body",
+      "Adjustable viewing angle",
+      "Silicone pads protect your device",
+      "Fits phones and small tablets",
+      "Cable routing channel",
+    ],
+    benefits: [
+      { title: "Perfect angle", detail: "Dial in the ideal height for calls, recipes, or media." },
+      { title: "Rock steady", detail: "Weighted base keeps devices secure while you type." },
+      { title: "Goes anywhere", detail: "Slim, durable build travels from desk to kitchen." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-zinc-100 via-neutral-100 to-zinc-300",
+    badge: "Best Seller",
+  },
+  {
+    slug: "braided-cable-organizer-set",
+    name: "Braided Cable Organizer Set",
+    category: "everyday-essentials",
+    price: 14.99,
+    rating: 4.5,
+    reviewCount: 487,
+    shortDescription:
+      "Reusable cable ties and clips that bring order to every drawer and desk.",
+    description:
+      "A set of reusable braided cable ties and adhesive clips that tame charging cables, earbuds, and cords for a tidy, intentional setup.",
+    features: [
+      "Reusable hook-and-loop ties",
+      "Adhesive-backed cable clips",
+      "Soft braided finish",
+      "Multiple sizes included",
+      "Residue-free removal",
+    ],
+    benefits: [
+      { title: "Instant tidiness", detail: "Bundle and route cables in seconds." },
+      { title: "Reusable", detail: "Re-position as often as your setup changes." },
+      { title: "Premium feel", detail: "Braided texture looks better than plastic zip ties." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-stone-100 via-neutral-100 to-stone-300",
+  },
+  {
+    slug: "everyday-water-bottle-24oz",
+    name: "Everyday Water Bottle (24oz)",
+    category: "everyday-essentials",
+    price: 21.99,
+    rating: 4.6,
+    reviewCount: 398,
+    shortDescription:
+      "A clean, leak-proof daily bottle that fits your bag, car, and routine.",
+    description:
+      "A simple, leak-proof 24oz bottle in matte stainless steel. The everyday companion engineered for the gym, the commute, and the desk.",
+    features: [
+      "Leak-proof flip lid",
+      "Matte anti-slip finish",
+      "Fits standard cup holders",
+      "BPA-free throughout",
+      "Wide mouth for easy cleaning",
+    ],
+    benefits: [
+      { title: "Just works", detail: "No fuss, no leaks — the bottle you reach for daily." },
+      { title: "Comfortable grip", detail: "Matte coating feels secure in hand." },
+      { title: "Easy to clean", detail: "Wide opening fits a bottle brush and ice." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-sky-50 via-slate-100 to-slate-300",
+  },
+  {
+    slug: "minimalist-key-organizer",
+    name: "Minimalist Key Organizer",
+    category: "everyday-essentials",
+    price: 16.99,
+    rating: 4.4,
+    reviewCount: 274,
+    shortDescription:
+      "Compact key holder that silences jingle and slims your pocket.",
+    description:
+      "A compact aluminum key organizer that stacks your keys into a slim, silent tool. No more bulky, jingling keychains.",
+    features: [
+      "Holds up to 8 keys",
+      "Aircraft-grade aluminum plates",
+      "Silences key jingle",
+      "Expandable hardware included",
+      "Add-on loop for fobs",
+    ],
+    benefits: [
+      { title: "Pocket-friendly", detail: "Stacks keys into a slim, quiet bundle." },
+      { title: "Built tough", detail: "Aluminum plates resist bending and wear." },
+      { title: "Expandable", detail: "Add a loop for car fobs and locker keys." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-neutral-200 via-zinc-200 to-neutral-300",
+  },
+  {
+    slug: "lint-roller-travel-duo",
+    name: "Lint Roller Travel Duo",
+    category: "everyday-essentials",
+    price: 12.99,
+    rating: 4.5,
+    reviewCount: 331,
+    shortDescription:
+      "A home and travel lint roller pair with a refined, retractable design.",
+    description:
+      "A two-piece lint roller set — a full-size roller for home and a retractable mini for your bag — finished in clean matte housings.",
+    features: [
+      "Full-size + travel mini",
+      "Retractable protective cover",
+      "Easy tear-off sheets",
+      "Replaceable refills",
+      "Matte, fingerprint-resistant housing",
+    ],
+    benefits: [
+      { title: "Always ready", detail: "One for home, one for the bag — covered everywhere." },
+      { title: "Clean design", detail: "Looks intentional left out on a shelf." },
+      { title: "Refillable", detail: "Swap sheets instead of buying new rollers." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-rose-50 via-stone-100 to-neutral-300",
+  },
+
+  // ----------------------- Office Products -----------------------
+  {
+    slug: "aluminum-laptop-riser-stand",
+    name: "Aluminum Laptop Riser Stand",
+    category: "office-products",
+    price: 46.99,
+    compareAtPrice: 59.99,
+    rating: 4.8,
+    reviewCount: 421,
+    shortDescription:
+      "Ergonomic riser that lifts your laptop to eye level with airflow to spare.",
+    description:
+      "A precision aluminum laptop riser that elevates your screen to a healthier eye level while improving airflow and cable management.",
+    features: [
+      "CNC aluminum, color-matched finish",
+      "Raises screen to ergonomic height",
+      "Open design improves cooling",
+      "Silicone pads grip and protect",
+      "Supports laptops up to 17 inches",
+    ],
+    benefits: [
+      { title: "Better posture", detail: "Eye-level screen reduces neck and shoulder strain." },
+      { title: "Cooler laptop", detail: "Open frame lets heat escape from below." },
+      { title: "Desk-grade build", detail: "Solid aluminum matches premium machines." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-zinc-100 via-neutral-200 to-zinc-300",
+    badge: "Best Seller",
+  },
+  {
+    slug: "under-desk-cable-tray",
+    name: "Under-Desk Cable Management Tray",
+    category: "office-products",
+    price: 32.99,
+    rating: 4.6,
+    reviewCount: 289,
+    shortDescription:
+      "Steel tray that hides power strips and cables for a clean, floating desk.",
+    description:
+      "A powder-coated steel under-desk tray that routes power strips, adapters, and cables out of sight for a clean, professional workspace.",
+    features: [
+      "Powder-coated steel frame",
+      "Holds power strips and bricks",
+      "Clamp and screw mount options",
+      "Open weave for airflow",
+      "Fits most desk depths",
+    ],
+    benefits: [
+      { title: "Clean desk", detail: "Hide the tangle for a focused workspace." },
+      { title: "Sturdy", detail: "Steel frame supports heavy power hardware." },
+      { title: "Flexible mounting", detail: "Clamp or screw to suit your desk." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-neutral-200 via-zinc-200 to-neutral-300",
+  },
+  {
+    slug: "led-monitor-light-bar",
+    name: "LED Monitor Light Bar",
+    category: "office-products",
+    price: 49.99,
+    rating: 4.7,
+    reviewCount: 356,
+    shortDescription:
+      "Screen-mounted light that reduces eye strain without screen glare.",
+    description:
+      "A monitor-mounted LED light bar that illuminates your desk with adjustable warmth and brightness — no glare on the screen, no desk space used.",
+    features: [
+      "Asymmetric optics — zero screen glare",
+      "Adjustable color temperature",
+      "Stepless brightness dial",
+      "USB powered",
+      "No-clamp counterweight design",
+    ],
+    benefits: [
+      { title: "Easier on the eyes", detail: "Balanced desk light reduces strain in dim rooms." },
+      { title: "No glare", detail: "Targeted optics keep light off your screen." },
+      { title: "Saves space", detail: "Sits on the monitor — frees your whole desk." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-amber-50 via-stone-100 to-zinc-300",
+  },
+  {
+    slug: "leather-desk-mat",
+    name: "Leather Desk Mat",
+    category: "office-products",
+    price: 39.99,
+    rating: 4.8,
+    reviewCount: 244,
+    shortDescription:
+      "Dual-sided desk mat that anchors your setup in quiet, premium style.",
+    description:
+      "A dual-sided vegan leather desk mat that defines your workspace, protects your desk, and gives mouse and keyboard a refined, stable surface.",
+    features: [
+      "Dual-sided vegan leather",
+      "Water-resistant surface",
+      "Non-slip backing",
+      "Stitched, durable edges",
+      "Rolls flat without curling",
+    ],
+    benefits: [
+      { title: "Defined workspace", detail: "Anchors your setup with a clean footprint." },
+      { title: "Protects your desk", detail: "Guards against scratches and spills." },
+      { title: "Refined feel", detail: "Soft-touch surface elevates the whole desk." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-stone-200 via-neutral-200 to-stone-400",
+  },
+  {
+    slug: "ergonomic-wrist-rest-set",
+    name: "Ergonomic Wrist Rest Set",
+    category: "office-products",
+    price: 27.99,
+    rating: 4.5,
+    reviewCount: 198,
+    shortDescription:
+      "Memory-foam keyboard and mouse rests for all-day typing comfort.",
+    description:
+      "A matched keyboard and mouse wrist rest set with memory foam cores and a soft, durable cover that supports neutral wrist posture all day.",
+    features: [
+      "Memory foam cores",
+      "Keyboard + mouse pair",
+      "Non-slip base",
+      "Soft, breathable cover",
+      "Spill-resistant surface",
+    ],
+    benefits: [
+      { title: "All-day comfort", detail: "Supports a neutral wrist position while you work." },
+      { title: "Stays put", detail: "Grippy base keeps rests in place." },
+      { title: "Easy to maintain", detail: "Wipe-clean cover handles daily use." },
+    ],
+    amazonUrl: "https://www.amazon.com/stores/zevrian",
+    accent: "from-slate-50 via-stone-100 to-slate-200",
   },
 ];
 

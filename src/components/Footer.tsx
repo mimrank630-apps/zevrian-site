@@ -21,7 +21,7 @@ export function Footer() {
               rel="noopener noreferrer"
               className="btn btn-gold mt-6 !px-5 !py-2.5 text-xs"
             >
-              Shop on Amazon
+              Explore on Amazon
             </a>
           </div>
 

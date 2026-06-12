@@ -5,6 +5,8 @@ const categoryAccent: Record<string, string> = {
   "kitchen-dining": "from-amber-100 via-stone-100 to-stone-300",
   "home-organization": "from-stone-100 via-neutral-100 to-zinc-300",
   "travel-outdoor": "from-teal-50 via-slate-100 to-slate-300",
+  "everyday-essentials": "from-rose-50 via-stone-100 to-neutral-300",
+  "office-products": "from-sky-50 via-slate-100 to-zinc-300",
 };
 
 export function CategoryCard({ category }: { category: Category }) {

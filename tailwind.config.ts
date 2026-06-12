@@ -11,7 +11,7 @@ const config: Config = {
       colors: {
         // Zevrian luxury palette
         charcoal: {
-          DEFAULT: "#111111",
+          DEFAULT: "#0F0F0F",
           50: "#f5f5f5",
           100: "#e6e6e6",
           200: "#cccccc",
@@ -21,7 +21,7 @@ const config: Config = {
           600: "#2b2b2b",
           700: "#1f1f1f",
           800: "#171717",
-          900: "#111111",
+          900: "#0F0F0F",
           950: "#0a0a0a",
         },
         gold: {

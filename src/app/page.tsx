@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
+import { TrustBar } from "@/components/TrustBar";
 import { categories, getFeaturedProducts } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 
@@ -43,12 +44,13 @@ export default function HomePage() {
           <div className="max-w-3xl animate-fade-up">
             <span className="eyebrow text-gold-light">Private label · Amazon FBA</span>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Considered essentials for modern living.
+              Essentials, designed for the life you deserve.
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-charcoal-300">
-              {siteConfig.name} designs premium products for the kitchen, home,
-              and travel — engineered with intention and available worldwide
-              through our {siteConfig.amazonStoreName} storefront on Amazon.
+              Precision-engineered kitchen, home, and travel products that
+              elevate every moment — designed with intention by {siteConfig.name}{" "}
+              and delivered worldwide through our {siteConfig.amazonStoreName}{" "}
+              storefront on Amazon.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/products" className="btn btn-gold">
@@ -60,12 +62,15 @@ export default function HomePage() {
                 rel="noopener noreferrer"
                 className="btn btn-secondary !border-charcoal-700 !bg-transparent !text-white hover:!bg-white hover:!text-charcoal-900"
               >
-                Shop on Amazon
+                Explore on Amazon
               </a>
             </div>
           </div>
         </Container>
       </section>
+
+      {/* Trust bar */}
+      <TrustBar />
 
       {/* Brand story */}
       <section className="py-20 sm:py-28">
