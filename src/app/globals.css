@@ -1,0 +1,80 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #ffffff;
+    --foreground: #111111;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-feature-settings: "ss01", "cv01";
+  }
+
+  ::selection {
+    background-color: #C6A43F;
+    color: #111111;
+  }
+}
+
+@layer components {
+  .container-px {
+    @apply mx-auto w-full max-w-container px-5 sm:px-8 lg:px-10;
+  }
+
+  .eyebrow {
+    @apply text-xs font-semibold uppercase tracking-luxe text-gold-500;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-full text-sm font-semibold transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-60;
+  }
+
+  .btn-primary {
+    @apply bg-charcoal px-7 py-3.5 text-white hover:bg-charcoal-700 active:scale-[0.98];
+  }
+
+  .btn-gold {
+    @apply bg-gold px-7 py-3.5 text-charcoal-900 hover:bg-gold-light active:scale-[0.98];
+  }
+
+  .btn-secondary {
+    @apply border border-charcoal-200 bg-white px-7 py-3.5 text-charcoal hover:border-charcoal hover:bg-charcoal hover:text-white active:scale-[0.98];
+  }
+
+  .btn-ghost {
+    @apply px-2 py-1 text-charcoal-500 hover:text-charcoal;
+  }
+
+  .card {
+    @apply rounded-2xl border border-charcoal-100 bg-white transition-all duration-300;
+  }
+
+  .field-label {
+    @apply mb-1.5 block text-sm font-medium text-charcoal-700;
+  }
+
+  .field-input {
+    @apply w-full rounded-xl border border-charcoal-200 bg-white px-4 py-3 text-sm text-charcoal placeholder:text-charcoal-300 transition-colors focus:border-gold focus:outline-none focus:ring-1 focus:ring-gold;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Legal document readability */
+  .legal-prose a {
+    @apply text-gold-600 underline underline-offset-2;
+  }
+}

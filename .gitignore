@@ -1,15 +1,38 @@
-# OS
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# cloudflare / vercel build output
+.vercel
+.wrangler
+
+# misc
 .DS_Store
+*.pem
 Thumbs.db
 
-# Editor
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Node (not used but prevent auto-detection)
-node_modules/
+# debug
 npm-debug.log*
-package-lock.json
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files
+.env
+.env*.local
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
