@@ -2,21 +2,20 @@ import Link from "next/link";
 
 interface LogoProps {
   className?: string;
-  /** Wordmark color context. The gold accent stays constant. */
+  /** Wordmark color context. The gold mark stays constant. */
   variant?: "dark" | "light";
-  /** Show the geometric Z mark beside the wordmark. */
+  /** Show the diamond Z monogram beside the wordmark. */
   showMark?: boolean;
   /** Render as a plain element (no link) — e.g. inside the brand showcase. */
   asLink?: boolean;
 }
 
+const GOLD = "#C6A43F";
+
 /**
- * ZEVRIAN — premium geometric wordmark.
- *
- * Design language (v6): capital sans-serif wordmark, tight -0.05em kerning,
- * weight 700, charcoal with a single gold accent. Paired with an engineered
- * monoline "Z" mark (square terminals, no curves) that reads as precision.
- * Fully vector / CSS — scales perfectly from favicon to billboard.
+ * ZEVRIAN brand mark — a gold diamond "Z" monogram paired with a spaced,
+ * uppercase wordmark. Fully vector (inline SVG + CSS), scales perfectly from
+ * favicon to billboard.
  */
 export function Logo({
   className = "",
@@ -25,34 +24,12 @@ export function Logo({
   asLink = true,
 }: LogoProps) {
   const wordmarkColor = variant === "light" ? "text-white" : "text-charcoal-900";
-  const markStroke = variant === "light" ? "#FFFFFF" : "#0F0F0F";
 
   const inner = (
     <span className="inline-flex items-center gap-2.5">
-      {showMark && (
-        <svg
-          width="26"
-          height="26"
-          viewBox="0 0 32 32"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-          className="shrink-0"
-          aria-hidden="true"
-        >
-          {/* Engineered Z — square terminals, geometric, no curves */}
-          <path
-            d="M8 8H24L8 24H24"
-            stroke={markStroke}
-            strokeWidth="3"
-            strokeLinecap="square"
-            strokeLinejoin="miter"
-          />
-          {/* Single gold accent — precision detail */}
-          <rect x="24" y="6.5" width="3" height="3" fill="#C6A43F" />
-        </svg>
-      )}
+      {showMark && <DiamondMark className="h-9 w-9 shrink-0" />}
       <span
-        className={`text-xl font-bold uppercase leading-none tracking-wordmark ${wordmarkColor}`}
+        className={`text-lg font-semibold uppercase tracking-[0.25em] ${wordmarkColor}`}
       >
         Zevrian
       </span>
@@ -72,33 +49,39 @@ export function Logo({
   );
 }
 
-/**
- * Icon-only mark for tight spaces (avatars, inline trust badges).
- */
-export function LogoMark({
-  className = "",
-  variant = "dark",
-}: {
-  className?: string;
-  variant?: "dark" | "light";
-}) {
-  const stroke = variant === "light" ? "#FFFFFF" : "#0F0F0F";
+function DiamondMark({ className = "" }: { className?: string }) {
   return (
     <svg
-      viewBox="0 0 32 32"
+      viewBox="0 0 40 40"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       className={className}
       aria-hidden="true"
     >
-      <path
-        d="M8 8H24L8 24H24"
-        stroke={stroke}
-        strokeWidth="3"
-        strokeLinecap="square"
-        strokeLinejoin="miter"
+      <rect
+        x="20"
+        y="2"
+        width="25.46"
+        height="25.46"
+        rx="4"
+        transform="rotate(45 20 2)"
+        stroke={GOLD}
+        strokeWidth="2"
       />
-      <rect x="24" y="6.5" width="3" height="3" fill="#C6A43F" />
+      <path
+        d="M13.5 13.5H26.5L13.5 26.5H26.5"
+        stroke={GOLD}
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
+}
+
+/**
+ * Icon-only mark for tight spaces (avatars, favicons, inline badges).
+ */
+export function LogoMark({ className = "" }: { className?: string }) {
+  return <DiamondMark className={className} />;
 }

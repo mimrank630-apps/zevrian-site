@@ -58,8 +58,8 @@ export default function BrandPage() {
           <SectionHeading
             align="left"
             eyebrow="The mark"
-            title="The Zevrian wordmark"
-            description="A geometric, capital sans-serif wordmark with tight kerning, paired with an engineered Z mark — square terminals, no curves. It looks like it was designed by an engineer, not a marketing department. Rendered as inline SVG and CSS for perfect clarity at any size."
+            title="The Zevrian logo"
+            description="A gold diamond monogram framing a clean Z, paired with a spaced, uppercase wordmark — a balance of precision and prestige. Rendered as inline SVG for perfect clarity at any size, from favicon to billboard."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <div className="flex items-center justify-center rounded-2xl border border-charcoal-100 bg-white p-16">
