@@ -59,7 +59,7 @@ export default function BrandPage() {
             align="left"
             eyebrow="The mark"
             title="The Zevrian logo"
-            description="A gold diamond monogram framing a clean Z, paired with a spaced, uppercase wordmark — a balance of precision and prestige. Rendered as inline SVG for perfect clarity at any size, from favicon to billboard."
+            description="A solid gold tile holding a clean geometric Z, paired with a spaced uppercase wordmark. The tile reads clearly on light and dark surfaces alike — a confident, modern mark in the language of premium consumer brands. Rendered as inline SVG for perfect clarity at any size."
           />
           <div className="mt-12 grid gap-6 lg:grid-cols-2">
             <div className="flex items-center justify-center rounded-2xl border border-charcoal-100 bg-white p-16">
