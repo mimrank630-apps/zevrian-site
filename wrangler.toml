@@ -2,3 +2,11 @@ name = "zevrian-site"
 compatibility_date = "2024-09-23"
 compatibility_flags = ["nodejs_compat"]
 pages_build_output_dir = ".vercel/output/static"
+
+# Plaintext environment variables.
+# Because this project uses wrangler.toml, non-secret vars are managed here
+# (the Cloudflare dashboard only allows adding Secrets when wrangler.toml exists).
+# Secrets (e.g. RESEND_API_KEY) should still be added in the dashboard as type "Secret".
+[vars]
+NEXT_PUBLIC_SITE_URL = "https://zevrian.com"
+CONTACT_EMAIL_TO = "info@zevrian.com"
