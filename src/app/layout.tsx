@@ -55,31 +55,6 @@ export const metadata: Metadata = {
   },
 };
 
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "Organization",
-  name: siteConfig.legalName,
-  alternateName: siteConfig.name,
-  url: siteConfig.url,
-  email: siteConfig.email,
-  logo: `${siteConfig.url}/favicon.svg`,
-  description: siteConfig.description,
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: siteConfig.address.line1,
-    addressLocality: siteConfig.address.city,
-    addressRegion: siteConfig.address.state,
-    postalCode: siteConfig.address.zip,
-    addressCountry: "US",
-  },
-  contactPoint: {
-    "@type": "ContactPoint",
-    email: siteConfig.email,
-    contactType: "customer support",
-    areaServed: "Worldwide",
-  },
-};
-
 export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
