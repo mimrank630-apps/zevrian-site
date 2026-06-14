@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     "office products",
     "everyday essentials",
     "Amazon FBA brand",
-    "private label lifestyle products",
+    "Amazon FBA brand",
   ],
   alternates: { canonical: "/products" },
   openGraph: {
@@ -90,7 +90,7 @@ export default async function ProductsPage({
             <p className="mt-4 text-base leading-relaxed text-charcoal-500 sm:text-lg">
               {activeCategory
                 ? activeCategory.description
-                : "Premium private-label essentials across kitchen, home, and travel — each one engineered to be a pleasure to own."}
+                : "Premium essentials across kitchen, home, and travel — each one engineered to be a pleasure to own."}
             </p>
           </div>
         </Container>

@@ -18,18 +18,13 @@ const signals = [
     detail: "Engineered to last",
     icon: <path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6L12 2Z" />,
   },
-  {
-    label: "Global Shipping",
-    detail: "Delivered to 150+ countries",
-    icon: <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z" />,
-  },
 ];
 
 export function TrustBar() {
   return (
     <section className="border-y border-charcoal-100 bg-white">
       <Container>
-        <ul className="grid grid-cols-2 gap-x-6 gap-y-8 py-10 lg:grid-cols-4">
+        <ul className="grid grid-cols-2 gap-x-6 gap-y-8 py-10 lg:grid-cols-3">
           {signals.map((signal) => (
             <li key={signal.label} className="flex items-center gap-3.5">
               <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-charcoal-50 text-gold-600">

@@ -14,12 +14,6 @@ const points = [
       "Backed by Amazon's straightforward return policy and buyer protection on every purchase.",
     icon: <path d="M3 7v6h6M21 17v-6h-6M21 7a9 9 0 0 0-15-3M3 17a9 9 0 0 0 15 3" />,
   },
-  {
-    title: "Shipped to 150+ countries",
-    detail:
-      "From Sheridan, Wyoming to your door — wherever you are, delivered with confidence.",
-    icon: <path d="M12 22a10 10 0 1 0 0-20 10 10 0 0 0 0 20ZM2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20Z" />,
-  },
 ];
 
 /**
@@ -43,7 +37,7 @@ export function AmazonTrustSection() {
           </p>
         </div>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-charcoal-800 bg-charcoal-800 sm:grid-cols-3">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-2xl border border-charcoal-800 bg-charcoal-800 sm:grid-cols-2">
           {points.map((point) => (
             <div key={point.title} className="bg-charcoal-950 p-8">
               <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/5 text-gold">

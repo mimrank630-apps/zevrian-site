@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
 
       <LegalSection heading="3. Products and Purchases">
         <p>
-          {siteConfig.name} operates a private-label and Amazon FBA business.
+          {siteConfig.name} operates an Amazon FBA wholesale business.
           Product purchases are fulfilled through our {siteConfig.amazonStoreName}{" "}
           storefront on Amazon and are subject to Amazon&rsquo;s terms,
           policies, pricing, and availability. Product information on this site

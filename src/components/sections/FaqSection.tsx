@@ -14,7 +14,7 @@ export const faqs = [
   },
   {
     q: "Does Zevrian ship internationally?",
-    a: "Yes. Through Amazon's global fulfillment network, Zevrian products ship to 150+ countries with reliable delivery and tracking.",
+    a: "Shipping availability varies by country. Please check your specific Amazon listing to confirm delivery options in your area.",
   },
   {
     q: "What is your return policy?",
@@ -22,7 +22,7 @@ export const faqs = [
   },
   {
     q: "Are you a wholesaler or distributor?",
-    a: "No. Zevrian is a private-label brand, not a wholesaler. Manufacturers and supply-chain partners are welcome to reach us through the supplier form on our contact page.",
+    a: "Zevrian currently operates as an Amazon FBA wholesale business, with plans to expand into private label in the future. Manufacturers and supply-chain partners are welcome to reach us through the supplier form on our contact page.",
   },
   {
     q: "How can I contact Zevrian?",

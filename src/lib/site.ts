@@ -8,12 +8,14 @@ export const siteConfig = {
   legalName: "Zevrian Global LLC",
   tagline: "Considered essentials for modern living.",
   description:
-    "Zevrian designs premium private-label essentials for the kitchen, home, and travel. Discover thoughtfully engineered products, available on Amazon under Zevrian Direct.",
+    "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zevrian.com",
   email: "info@zevrian.com",
   amazonStoreName: "Zevrian Direct",
   amazonStoreUrl: "https://www.amazon.com/stores/zevrian",
-  // Placeholder support number — replace with the real WhatsApp business line.
+  // ⚠️ TODO [PRE-LAUNCH]: Replace the placeholder WhatsApp number below with the
+  // real Zevrian business WhatsApp number before going live. Current value is
+  // +1 (555) 555-5555 which is NOT a valid number.
   whatsappNumber: "15555555555",
   whatsappUrl:
     "https://wa.me/15555555555?text=Hi%20Zevrian%2C%20I%20have%20a%20question%20about%20your%20products.",

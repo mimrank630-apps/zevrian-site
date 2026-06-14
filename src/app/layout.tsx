@@ -18,7 +18,6 @@ export const metadata: Metadata = {
     "Zevrian",
     "Zevrian Global LLC",
     "Zevrian Direct",
-    "private label",
     "Amazon FBA",
     "premium kitchen products",
     "home organization",

@@ -1,0 +1,33 @@
+{
+  "project_type": "Next.js 15 App Router with TypeScript + Tailwind CSS, deployed to Cloudflare Pages",
+  "language": "TypeScript/TSX",
+  "build_system": "Next.js with @cloudflare/next-on-pages, npm scripts",
+  "test_framework": "No test framework configured - this is a static/SSR site with no test suite",
+  "build_command": "Cannot run npm install or build in INTEGRATIONS_ONLY mode - validate via AST/syntax only",
+  "test_command": "N/A - no tests configured",
+  "verification_instructions": "Since we cannot run npm install or build locally (INTEGRATIONS_ONLY network), verification is limited to: 1) Confirming TypeScript syntax is valid, 2) Verifying no imports are broken, 3) Reviewing changes against requirements. The actual build will run on Cloudflare Pages after push.",
+  "snapshot_or_generated_files": null,
+  "setup_instructions": "N/A - cannot install dependencies in sandbox",
+  "environment_constraints": "INTEGRATIONS_ONLY network - no npm install possible. Code changes must be committed and pushed to main via GitHub power tool. Build validation happens on Cloudflare Pages after push.",
+  "contribution_requirements": "Commit and push to main branch. Cloudflare auto-deploys from main.",
+  "key_patterns": "Components use siteConfig from @/lib/site.ts for centralized config. Pages export metadata objects for SEO. Sections are in src/components/sections/. Dark theme with gold accents throughout.",
+  "relevant_files": [
+    "src/app/page.tsx",
+    "src/app/about/page.tsx",
+    "src/app/brand/page.tsx",
+    "src/app/products/page.tsx",
+    "src/app/contact/page.tsx",
+    "src/app/layout.tsx",
+    "src/app/terms-of-service/page.tsx",
+    "src/components/Footer.tsx",
+    "src/components/TrustBar.tsx",
+    "src/components/WhatsAppButton.tsx",
+    "src/components/sections/FaqSection.tsx",
+    "src/components/sections/AmazonTrustSection.tsx",
+    "src/components/sections/SocialProof.tsx",
+    "src/lib/site.ts",
+    "src/lib/seo.ts",
+    "src/lib/products.ts"
+  ],
+  "directory_structure": "src/app/ has page routes (page.tsx files), src/components/ has reusable components and sections/, src/lib/ has config and data files"
+}

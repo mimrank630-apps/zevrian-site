@@ -7,12 +7,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "The story, mission, and roadmap behind Zevrian Global LLC — a focused private-label brand building premium everyday essentials.",
+    "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
   keywords: [
     "Zevrian about",
     "brand story",
     "Zevrian Global LLC",
-    "private label brand",
+    "Amazon FBA wholesale brand",
     "Wyoming LLC",
     "Amazon FBA brand",
   ],
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About — Zevrian",
     description:
-      "The story, mission, and roadmap behind Zevrian Global LLC — a focused private-label brand.",
+      "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
     url: `${siteConfig.url}/about`,
     type: "website",
   },
@@ -62,7 +62,7 @@ const roadmap = [
     title: "Private label expansion",
     detail:
       "Deepen each collection with thoughtfully engineered additions, building brand recognition and loyal repeat customers.",
-    status: "In progress",
+    status: "Planned",
   },
   {
     phase: "Phase 03",
@@ -84,8 +84,8 @@ export default function AboutPage() {
               We build fewer things, better.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
-              {siteConfig.legalName} is an independent lifestyle company creating
-              premium private-label essentials for the kitchen, home, and travel.
+              {siteConfig.legalName} is an Amazon FBA wholesale business creating
+              premium essentials for the kitchen, home, and travel.
               We exist to bring intention and quality back to the objects people
               use every day.
             </p>

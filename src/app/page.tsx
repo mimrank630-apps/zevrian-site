@@ -46,14 +46,14 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:64px_64px]" />
         <Container className="relative py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl animate-fade-up">
-            <span className="eyebrow text-gold-light">Private label · Amazon FBA</span>
+            <span className="eyebrow text-gold-light">Amazon FBA</span>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
               Essentials, designed for the life you deserve.
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-charcoal-300">
               Precision-engineered kitchen, home, and travel products that
               elevate every moment — designed with intention by {siteConfig.name}{" "}
-              and delivered worldwide through our {siteConfig.amazonStoreName}{" "}
+              and available through our {siteConfig.amazonStoreName}{" "}
               storefront on Amazon.
             </p>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
@@ -97,10 +97,10 @@ export default function HomePage() {
                   finish.
                 </p>
                 <p>
-                  As a focused private-label company, we develop a tight,
+                  As a focused Amazon FBA wholesale business, we develop a tight,
                   intentional catalog rather than chasing trends. Each product
-                  is engineered with premium materials and brought to customers
-                  worldwide through Amazon fulfillment.
+                  is engineered with premium materials and available through
+                  Amazon fulfillment.
                 </p>
               </div>
               <Link

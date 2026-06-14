@@ -1,0 +1,7 @@
+{
+  "task_id": "task-compliance-copy-update",
+  "task_description": "Apply targeted compliance and copy updates to the Zevrian site: remove unverifiable shipping claims, update private label positioning to reflect Amazon FBA wholesale business model, update FAQ answers, fix footer tagline, update meta descriptions, and flag WhatsApp placeholder.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001"],
+  "blocked_reason": null
+}

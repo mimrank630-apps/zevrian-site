@@ -12,7 +12,7 @@ export function Footer() {
           <div>
             <Logo variant="light" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-charcoal-300">
-              {siteConfig.tagline} Premium private-label essentials, available
+              {siteConfig.tagline} Premium essentials, available
               on Amazon under {siteConfig.amazonStoreName}.
             </p>
             <a
@@ -70,7 +70,7 @@ export function Footer() {
         </div>
 
         <p className="mt-6 text-xs leading-relaxed text-charcoal-500">
-          {siteConfig.legalName} operates a private-label and Amazon FBA
+          {siteConfig.legalName} operates an Amazon FBA wholesale
           business. Product availability and pricing are managed through our
           {" "}
           {siteConfig.amazonStoreName} storefront on Amazon. Address shown is
