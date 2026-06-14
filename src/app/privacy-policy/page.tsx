@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 
 export default function PrivacyPolicyPage() {
   return (
-    <LegalLayout title="Privacy Policy" updated="January 1, 2026">
+    <LegalLayout title="Privacy Policy" updated="June 14, 2025">
       <p className="text-sm leading-relaxed">
         This Privacy Policy describes how {siteConfig.legalName}
         (&ldquo;{siteConfig.name},&rdquo; &ldquo;we,&rdquo; &ldquo;us,&rdquo; or
