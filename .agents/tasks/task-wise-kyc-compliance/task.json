@@ -1,0 +1,7 @@
+{
+  "task_id": "task-wise-kyc-compliance",
+  "task_description": "Comprehensive Wise Business KYC compliance update for zevrian.com - remove WhatsApp, disable Amazon buttons, convert active-store to pre-launch language, add founder section, launch badge, footer LLC details, update meta descriptions, remove fake product data (ratings/reviews), ensure KYC consistency.",
+  "status": "in_progress",
+  "feature_order": ["FEAT-001", "FEAT-002"],
+  "blocked_reason": null
+}
