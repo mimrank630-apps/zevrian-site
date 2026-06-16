@@ -56,7 +56,7 @@ export default function HomePage() {
               and launching soon through our {siteConfig.amazonStoreName}{" "}
               storefront on Amazon.
             </p>
-            <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-semibold text-gold-600">
+            <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-2 text-sm font-semibold text-gold-light">
               <span aria-hidden="true">🚀</span>
               Launching on Amazon — Q3 2026
             </span>
@@ -159,7 +159,7 @@ export default function HomePage() {
               align="left"
               eyebrow="Featured"
               title="Pieces worth the counter space"
-              description="A selection of favorites from across the Zevrian catalog."
+              description="A selection of standouts from across the Zevrian catalog."
             />
             <Link
               href="/products"

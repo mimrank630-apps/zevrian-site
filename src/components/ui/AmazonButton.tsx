@@ -1,4 +1,5 @@
 interface AmazonButtonProps {
+  /** @deprecated Pre-launch: href is intentionally ignored. All buttons are disabled until Q3 2026 launch. */
   href?: string;
   className?: string;
   tone?: "gold" | "dark" | "outline";

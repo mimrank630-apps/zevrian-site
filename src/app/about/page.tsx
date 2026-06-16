@@ -207,7 +207,7 @@ export default function AboutPage() {
         <Container>
           <div className="flex flex-col items-center gap-6 text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-charcoal-900 sm:text-3xl">
-              Explore what we&rsquo;ve built so far.
+              Preview our planned catalog.
             </h2>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/products" className="btn btn-primary">

@@ -5,13 +5,13 @@ const points = [
   {
     title: "Fulfilled by Amazon",
     detail:
-      "Every order ships through Amazon's global logistics network — the same reliability you already trust.",
+      "Every order will ship through Amazon's global logistics network — the same reliability you already trust.",
     icon: <path d="M3 6h18l-1.5 12.5a2 2 0 0 1-2 1.75H6.5a2 2 0 0 1-2-1.75L3 6Zm5 0V5a4 4 0 0 1 8 0v1" />,
   },
   {
     title: "Easy returns",
     detail:
-      "Backed by Amazon's straightforward return policy and buyer protection on every purchase.",
+      "Backed by Amazon's straightforward return policy and buyer protection on every purchase, once live.",
     icon: <path d="M3 7v6h6M21 17v-6h-6M21 7a9 9 0 0 0-15-3M3 17a9 9 0 0 0 15 3" />,
   },
 ];

@@ -38,11 +38,6 @@ export function ProductImage({
           {product.name.charAt(0)}
         </span>
       )}
-      {product.badge && (
-        <span className="absolute left-4 top-4 rounded-full bg-charcoal-900/90 px-3 py-1 text-[10px] font-semibold uppercase tracking-wider text-white">
-          {product.badge}
-        </span>
-      )}
     </div>
   );
 }
