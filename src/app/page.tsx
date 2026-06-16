@@ -26,7 +26,7 @@ const trustPoints = [
   {
     title: "Backed on Amazon",
     detail:
-      "Shop with confidence through our Zevrian Direct storefront, with Amazon's fulfillment and returns.",
+      "Our Zevrian Direct storefront launches Q3 2026, with Amazon fulfillment and returns.",
   },
   {
     title: "Independently owned",
@@ -53,21 +53,25 @@ export default function HomePage() {
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-charcoal-300">
               Precision-engineered kitchen, home, and travel products that
               elevate every moment — designed with intention by {siteConfig.name}{" "}
-              and available through our {siteConfig.amazonStoreName}{" "}
+              and launching soon through our {siteConfig.amazonStoreName}{" "}
               storefront on Amazon.
             </p>
+            <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold/15 px-4 py-2 text-sm font-semibold text-gold-600">
+              <span aria-hidden="true">🚀</span>
+              Launching on Amazon — Q3 2026
+            </span>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/products" className="btn btn-gold">
                 Explore the catalog
               </Link>
-              <a
-                href={siteConfig.amazonStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn btn-secondary !border-charcoal-700 !bg-transparent !text-white hover:!bg-white hover:!text-charcoal-900"
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="btn cursor-not-allowed opacity-60 !border-charcoal-700 !bg-transparent !text-charcoal-400"
               >
-                Explore on Amazon
-              </a>
+                Coming Soon on Amazon
+              </button>
             </div>
           </div>
         </Container>
@@ -99,8 +103,8 @@ export default function HomePage() {
                 <p>
                   As a focused Amazon FBA wholesale business, we develop a tight,
                   intentional catalog rather than chasing trends. Each product
-                  is engineered with premium materials and available through
-                  Amazon fulfillment.
+                  is engineered with premium materials and will be available through
+                  Amazon fulfillment upon launch.
                 </p>
               </div>
               <Link

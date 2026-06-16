@@ -19,8 +19,8 @@ export interface Product {
   price: number;
   /** Optional pre-discount price for showing savings. */
   compareAtPrice?: number;
-  rating: number;
-  reviewCount: number;
+  rating?: number;
+  reviewCount?: number;
   shortDescription: string;
   description: string;
   features: string[];

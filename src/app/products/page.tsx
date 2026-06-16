@@ -15,7 +15,7 @@ import { breadcrumbJsonLd, itemListJsonLd, jsonLdScript } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse the full Zevrian catalog — premium kitchen, dining, home organization, office, everyday, and travel essentials, available on Amazon under Zevrian Direct.",
+    "Browse the full Zevrian catalog — premium kitchen, dining, home organization, office, everyday, and travel essentials, launching soon on Amazon under Zevrian Direct.",
   keywords: [
     "Zevrian products",
     "premium kitchen tools",
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Products — Zevrian",
     description:
-      "The full Zevrian catalog of precision-engineered essentials, available on Amazon under Zevrian Direct.",
+      "The full Zevrian catalog of precision-engineered essentials, launching soon on Amazon under Zevrian Direct.",
     url: `${siteConfig.url}/products`,
     type: "website",
   },

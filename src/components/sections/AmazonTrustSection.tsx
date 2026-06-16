@@ -27,10 +27,10 @@ export function AmazonTrustSection() {
         <div className="mx-auto max-w-2xl text-center">
           <span className="eyebrow text-gold-light">Why Amazon</span>
           <h2 className="mt-4 text-balance text-3xl font-bold tracking-tight text-white sm:text-4xl">
-            Premium, and accessible — through {siteConfig.amazonStoreName}.
+            Premium, and accessible — launching via {siteConfig.amazonStoreName}.
           </h2>
           <p className="mt-4 text-balance leading-relaxed text-charcoal-300">
-            Most premium brands are hard to reach. We use Amazon&rsquo;s
+            Most premium brands are hard to reach. We will use Amazon&rsquo;s
             world-class fulfillment so you get premium design with the speed,
             protection, and ease you already rely on. Amazon is our partner —
             not the brand.
@@ -64,14 +64,10 @@ export function AmazonTrustSection() {
         </div>
 
         <div className="mt-10 text-center">
-          <a
-            href={siteConfig.amazonStoreUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-gold"
-          >
-            Visit our Amazon store
-          </a>
+          <button type="button" disabled aria-disabled="true" className="btn cursor-not-allowed opacity-60 bg-charcoal-700 text-charcoal-400">
+            Coming Soon on Amazon
+          </button>
+          <p className="mt-2 text-sm text-charcoal-400">Available Q3 2026</p>
         </div>
       </Container>
     </section>

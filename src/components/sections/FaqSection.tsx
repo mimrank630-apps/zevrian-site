@@ -6,7 +6,7 @@ import { faqJsonLd, jsonLdScript } from "@/lib/seo";
 export const faqs = [
   {
     q: "Where can I buy Zevrian products?",
-    a: `Zevrian products are sold through our ${siteConfig.amazonStoreName} storefront on Amazon. Each product page links directly to its Amazon listing, where checkout, shipping, and returns are handled by Amazon.`,
+    a: `Zevrian products will be available through our ${siteConfig.amazonStoreName} storefront on Amazon, launching Q3 2026. Each product page will link directly to its Amazon listing.`,
   },
   {
     q: "Is Zevrian a real company?",

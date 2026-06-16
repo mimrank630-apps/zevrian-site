@@ -45,9 +45,6 @@ export const products: Product[] = [
     name: "Precision Pour-Over Coffee Kettle",
     category: "kitchen-dining",
     price: 49.99,
-    compareAtPrice: 64.99,
-    rating: 4.8,
-    reviewCount: 234,
     shortDescription:
       "Gooseneck precision and a built-in thermometer for cafe-grade pour-over at home.",
     description:
@@ -72,8 +69,6 @@ export const products: Product[] = [
     name: "Bamboo Magnetic Knife Block",
     category: "kitchen-dining",
     price: 64.99,
-    rating: 4.7,
-    reviewCount: 189,
     shortDescription:
       "Sustainable Moso bamboo with strong magnets to keep blades visible and safe.",
     description:
@@ -98,8 +93,6 @@ export const products: Product[] = [
     name: "Insulated French Press (34oz)",
     category: "kitchen-dining",
     price: 39.99,
-    rating: 4.6,
-    reviewCount: 312,
     shortDescription:
       "Double-wall vacuum insulation keeps coffee hot for hours with a clean, sediment-free brew.",
     description:
@@ -124,9 +117,6 @@ export const products: Product[] = [
     name: "Minimalist Ceramic Dinner Set (4pc)",
     category: "kitchen-dining",
     price: 89.99,
-    compareAtPrice: 109.99,
-    rating: 4.9,
-    reviewCount: 156,
     shortDescription:
       "Hand-finished stoneware with a matte glaze for understated, modern hosting.",
     description:
@@ -145,15 +135,12 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-stone-50 via-stone-100 to-stone-200",
-    badge: "New",
   },
   {
     slug: "silicone-cooking-utensil-set",
     name: "Silicone Cooking Utensil Set (8pc)",
     category: "kitchen-dining",
     price: 34.99,
-    rating: 4.5,
-    reviewCount: 421,
     shortDescription:
       "Heat-resistant, non-scratch silicone tools with a solid weighted feel.",
     description:
@@ -178,8 +165,6 @@ export const products: Product[] = [
     name: "Double-Wall Espresso Cups (Set of 4)",
     category: "kitchen-dining",
     price: 29.99,
-    rating: 4.7,
-    reviewCount: 203,
     shortDescription:
       "Borosilicate glass that keeps espresso hot while staying cool to the touch.",
     description:
@@ -206,8 +191,6 @@ export const products: Product[] = [
     name: "Modular Desktop Organizer — Walnut",
     category: "home-organization",
     price: 54.99,
-    rating: 4.8,
-    reviewCount: 167,
     shortDescription:
       "Solid walnut trays that reconfigure to fit your desk and your day.",
     description:
@@ -232,8 +215,6 @@ export const products: Product[] = [
     name: "Stackable Linen Storage Bins (Set of 3)",
     category: "home-organization",
     price: 42.99,
-    rating: 4.6,
-    reviewCount: 198,
     shortDescription:
       "Structured linen bins with a clean silhouette that stack and fold flat.",
     description:
@@ -258,8 +239,6 @@ export const products: Product[] = [
     name: "Magnetic Cable Management Tray",
     category: "home-organization",
     price: 24.99,
-    rating: 4.5,
-    reviewCount: 276,
     shortDescription:
       "Under-desk tray with magnetic clips to keep cables and adapters hidden.",
     description:
@@ -284,8 +263,6 @@ export const products: Product[] = [
     name: "Floating Wall Shelf — Matte Black",
     category: "home-organization",
     price: 37.99,
-    rating: 4.7,
-    reviewCount: 145,
     shortDescription:
       "Hidden-bracket shelf with a matte powder-coat for a seamless wall line.",
     description:
@@ -310,8 +287,6 @@ export const products: Product[] = [
     name: "Felt Drawer Dividers (Set of 6)",
     category: "home-organization",
     price: 19.99,
-    rating: 4.4,
-    reviewCount: 312,
     shortDescription:
       "Adjustable felt dividers that section any drawer without tools.",
     description:
@@ -336,8 +311,6 @@ export const products: Product[] = [
     name: "Acrylic Display Riser Set",
     category: "home-organization",
     price: 27.99,
-    rating: 4.6,
-    reviewCount: 134,
     shortDescription:
       "Crystal-clear risers that add tiered height for shelves and vanities.",
     description:
@@ -364,9 +337,6 @@ export const products: Product[] = [
     name: "Insulated Stainless Steel Bottle (32oz)",
     category: "travel-outdoor",
     price: 34.99,
-    compareAtPrice: 44.99,
-    rating: 4.9,
-    reviewCount: 528,
     shortDescription:
       "Triple-insulated bottle that holds cold 24h and hot 12h, leak-proof.",
     description:
@@ -391,8 +361,6 @@ export const products: Product[] = [
     name: "Hardshell Tech Organizer Case",
     category: "travel-outdoor",
     price: 44.99,
-    rating: 4.7,
-    reviewCount: 219,
     shortDescription:
       "Protective EVA shell with elastic loops for cables, chargers, and drives.",
     description:
@@ -417,8 +385,6 @@ export const products: Product[] = [
     name: "Packable Daypack — Ripstop Nylon",
     category: "travel-outdoor",
     price: 59.99,
-    rating: 4.6,
-    reviewCount: 187,
     shortDescription:
       "20L daypack that folds into its own pocket yet carries like a real bag.",
     description:
@@ -443,8 +409,6 @@ export const products: Product[] = [
     name: "Compression Packing Cubes (Set of 4)",
     category: "travel-outdoor",
     price: 32.99,
-    rating: 4.8,
-    reviewCount: 364,
     shortDescription:
       "Zip-to-compress cubes that shrink your packing and sort your suitcase.",
     description:
@@ -463,15 +427,12 @@ export const products: Product[] = [
     ],
     amazonUrl: "https://www.amazon.com/stores/zevrian",
     accent: "from-indigo-50 via-slate-100 to-slate-300",
-    badge: "New",
   },
   {
     slug: "collapsible-silicone-travel-mug",
     name: "Collapsible Silicone Travel Mug",
     category: "travel-outdoor",
     price: 22.99,
-    rating: 4.4,
-    reviewCount: 241,
     shortDescription:
       "Food-grade silicone mug that collapses flat with a leak-proof lid.",
     description:
@@ -496,8 +457,6 @@ export const products: Product[] = [
     name: "RFID-Blocking Passport Wallet",
     category: "travel-outdoor",
     price: 28.99,
-    rating: 4.7,
-    reviewCount: 298,
     shortDescription:
       "Vegan-leather travel wallet with RFID shielding for documents and cards.",
     description:
@@ -524,8 +483,6 @@ export const products: Product[] = [
     name: "Adjustable Aluminum Phone Stand",
     category: "everyday-essentials",
     price: 18.99,
-    rating: 4.7,
-    reviewCount: 612,
     shortDescription:
       "Machined aluminum stand that holds your phone at the perfect angle, anywhere.",
     description:
@@ -550,8 +507,6 @@ export const products: Product[] = [
     name: "Braided Cable Organizer Set",
     category: "everyday-essentials",
     price: 14.99,
-    rating: 4.5,
-    reviewCount: 487,
     shortDescription:
       "Reusable cable ties and clips that bring order to every drawer and desk.",
     description:
@@ -576,8 +531,6 @@ export const products: Product[] = [
     name: "Everyday Water Bottle (24oz)",
     category: "everyday-essentials",
     price: 21.99,
-    rating: 4.6,
-    reviewCount: 398,
     shortDescription:
       "A clean, leak-proof daily bottle that fits your bag, car, and routine.",
     description:
@@ -602,8 +555,6 @@ export const products: Product[] = [
     name: "Minimalist Key Organizer",
     category: "everyday-essentials",
     price: 16.99,
-    rating: 4.4,
-    reviewCount: 274,
     shortDescription:
       "Compact key holder that silences jingle and slims your pocket.",
     description:
@@ -628,8 +579,6 @@ export const products: Product[] = [
     name: "Lint Roller Travel Duo",
     category: "everyday-essentials",
     price: 12.99,
-    rating: 4.5,
-    reviewCount: 331,
     shortDescription:
       "A home and travel lint roller pair with a refined, retractable design.",
     description:
@@ -656,9 +605,6 @@ export const products: Product[] = [
     name: "Aluminum Laptop Riser Stand",
     category: "office-products",
     price: 46.99,
-    compareAtPrice: 59.99,
-    rating: 4.8,
-    reviewCount: 421,
     shortDescription:
       "Ergonomic riser that lifts your laptop to eye level with airflow to spare.",
     description:
@@ -683,8 +629,6 @@ export const products: Product[] = [
     name: "Under-Desk Cable Management Tray",
     category: "office-products",
     price: 32.99,
-    rating: 4.6,
-    reviewCount: 289,
     shortDescription:
       "Steel tray that hides power strips and cables for a clean, floating desk.",
     description:
@@ -709,8 +653,6 @@ export const products: Product[] = [
     name: "LED Monitor Light Bar",
     category: "office-products",
     price: 49.99,
-    rating: 4.7,
-    reviewCount: 356,
     shortDescription:
       "Screen-mounted light that reduces eye strain without screen glare.",
     description:
@@ -735,8 +677,6 @@ export const products: Product[] = [
     name: "Leather Desk Mat",
     category: "office-products",
     price: 39.99,
-    rating: 4.8,
-    reviewCount: 244,
     shortDescription:
       "Dual-sided desk mat that anchors your setup in quiet, premium style.",
     description:
@@ -761,8 +701,6 @@ export const products: Product[] = [
     name: "Ergonomic Wrist Rest Set",
     category: "office-products",
     price: 27.99,
-    rating: 4.5,
-    reviewCount: 198,
     shortDescription:
       "Memory-foam keyboard and mouse rests for all-day typing comfort.",
     description:
@@ -797,12 +735,8 @@ export function getCategory(slug: CategorySlug): Category | undefined {
 }
 
 export function getFeaturedProducts(limit = 6): Product[] {
-  // Surface badged items first, then fill by rating.
-  const badged = products.filter((p) => p.badge);
-  const rest = products
-    .filter((p) => !p.badge)
-    .sort((a, b) => b.rating - a.rating);
-  return [...badged, ...rest].slice(0, limit);
+  // Return first N products from the catalog.
+  return products.slice(0, limit);
 }
 
 export function getRelatedProducts(product: Product, limit = 3): Product[] {

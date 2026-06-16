@@ -8,7 +8,7 @@ export const siteConfig = {
   legalName: "Zevrian Global LLC",
   tagline: "Considered essentials for modern living.",
   description:
-    "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
+    "Zevrian Global LLC is a Wyoming-registered e-commerce company offering premium kitchen, home, and travel essentials through Amazon FBA under the Zevrian Direct storefront.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zevrian.com",
   email: "info@zevrian.com",
   amazonStoreName: "Zevrian Direct",
@@ -21,6 +21,8 @@ export const siteConfig = {
     zip: "82801",
     country: "USA",
   },
+  filingId: "2026-001998631",
+  incorporatedDate: "June 5, 2026",
   ogImage: "/og-image.svg",
 } as const;
 

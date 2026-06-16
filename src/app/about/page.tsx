@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
+    "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and travel essentials through Amazon FBA under Zevrian Direct.",
   keywords: [
     "Zevrian about",
     "brand story",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About — Zevrian",
     description:
-      "Zevrian is an Amazon FBA brand offering premium essentials for the kitchen, home, and travel — available through our Zevrian Direct storefront on Amazon.",
+      "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and travel essentials through Amazon FBA under Zevrian Direct.",
     url: `${siteConfig.url}/about`,
     type: "website",
   },
@@ -160,6 +160,44 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Founder */}
+      <section className="bg-charcoal-50 py-20 sm:py-28">
+        <Container>
+          <SectionHeading eyebrow="Leadership" title="The Founder" />
+          <div className="mx-auto mt-10 max-w-3xl">
+            <div className="card p-9">
+              <p className="text-base leading-relaxed text-charcoal-600">
+                Zevrian Global LLC was founded by Mohammad Imran Khan, an entrepreneur
+                originally from Nepal and currently based in Doha, Qatar.
+              </p>
+              <p className="mt-4 text-base leading-relaxed text-charcoal-600">
+                The company is incorporated in Wyoming, USA, as a registered Limited
+                Liability Company focused on Amazon FBA wholesale and private-label
+                operations for the U.S. market.
+              </p>
+              <dl className="mt-6 grid gap-4 sm:grid-cols-2">
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-luxe text-gold-600">
+                    Wyoming LLC Filing ID
+                  </dt>
+                  <dd className="mt-1 text-sm font-medium text-charcoal-900">
+                    2026-001998631
+                  </dd>
+                </div>
+                <div>
+                  <dt className="text-xs font-semibold uppercase tracking-luxe text-gold-600">
+                    Registered
+                  </dt>
+                  <dd className="mt-1 text-sm font-medium text-charcoal-900">
+                    June 5, 2026
+                  </dd>
+                </div>
+              </dl>
+            </div>
           </div>
         </Container>
       </section>

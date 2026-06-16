@@ -50,7 +50,7 @@ export default function PrivacyPolicyPage() {
 
       <LegalSection heading="4. Third-Party Services">
         <p>
-          Our products are sold through Amazon under our {siteConfig.amazonStoreName}{" "}
+          Our products will be sold through Amazon under our {siteConfig.amazonStoreName}{" "}
           storefront. When you click through to Amazon, your activity is governed
           by Amazon&rsquo;s own privacy policy. We may also use third-party
           analytics and email providers who process data on our behalf.

@@ -40,6 +40,9 @@ export default function ContactPage() {
               who&rsquo;d like to work with us, use the right form below and our
               team will respond promptly.
             </p>
+            <p className="mt-3 text-base text-charcoal-300">
+              Email: <a href="mailto:info@zevrian.com" className="text-gold-light hover:text-gold">info@zevrian.com</a>
+            </p>
           </div>
         </Container>
       </section>

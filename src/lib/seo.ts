@@ -81,7 +81,7 @@ export function productJsonLd(product: Product) {
       "@type": "Offer",
       price: product.price.toFixed(2),
       priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      availability: "https://schema.org/PreOrder",
       url: product.amazonUrl,
       seller: { "@type": "Organization", name: siteConfig.amazonStoreName },
     },
