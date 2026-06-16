@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { products } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 
 export const dynamic = "force-static";
@@ -18,19 +17,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/terms-of-service", priority: 0.3, changeFrequency: "yearly" as const },
   ];
 
-  const staticEntries: MetadataRoute.Sitemap = staticRoutes.map((route) => ({
+  return staticRoutes.map((route) => ({
     url: `${base}${route.path}`,
     lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
-
-  const productEntries: MetadataRoute.Sitemap = products.map((product) => ({
-    url: `${base}/products/${product.slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.8,
-  }));
-
-  return [...staticEntries, ...productEntries];
 }

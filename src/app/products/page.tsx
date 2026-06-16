@@ -1,78 +1,44 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
-import { ProductCard } from "@/components/ProductCard";
-import { ProductFilter } from "@/components/ProductFilter";
-import {
-  categories,
-  getCategory,
-  getProductsByCategory,
-  products,
-} from "@/lib/products";
-import type { CategorySlug } from "@/lib/types";
+import { categories } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
-import { breadcrumbJsonLd, itemListJsonLd, jsonLdScript } from "@/lib/seo";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Browse the full Zevrian catalog — premium kitchen, dining, home organization, office, everyday, and travel essentials, launching soon on Amazon under Zevrian Direct.",
+    "Zevrian Global LLC is preparing to launch premium kitchen, home, and office essentials through Amazon FBA under the Zevrian Direct storefront.",
   keywords: [
     "Zevrian products",
     "premium kitchen tools",
     "home organization",
-    "travel essentials",
     "office products",
-    "everyday essentials",
-    "Amazon FBA brand",
     "Amazon FBA brand",
   ],
   alternates: { canonical: "/products" },
   openGraph: {
     title: "Products — Zevrian",
     description:
-      "The full Zevrian catalog of precision-engineered essentials, launching soon on Amazon under Zevrian Direct.",
+      "Zevrian's planned product categories for our upcoming Amazon launch under Zevrian Direct.",
     url: `${siteConfig.url}/products`,
     type: "website",
   },
 };
 
-// This page reads searchParams (category filter), making it dynamic.
-// @cloudflare/next-on-pages requires dynamic routes to run on the edge.
-export const runtime = "edge";
+const categoryAccent: Record<string, string> = {
+  "kitchen-dining": "from-amber-100 via-stone-100 to-stone-300",
+  "home-organization": "from-stone-100 via-neutral-100 to-zinc-300",
+  "office-products": "from-sky-50 via-slate-100 to-zinc-300",
+};
 
-const validSlugs = categories.map((c) => c.slug);
-
-function isCategorySlug(value: string | undefined): value is CategorySlug {
-  return !!value && validSlugs.includes(value as CategorySlug);
-}
-
-export default async function ProductsPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ category?: string }>;
-}) {
-  const { category } = await searchParams;
-  const active: CategorySlug | "all" = isCategorySlug(category) ? category : "all";
-
-  const activeCategory = active !== "all" ? getCategory(active) : undefined;
-  const list =
-    active === "all" ? products : getProductsByCategory(active);
-
+export default function ProductsPage() {
   const breadcrumb = breadcrumbJsonLd([
     { name: "Home", path: "/" },
     { name: "Products", path: "/products" },
-    ...(activeCategory
-      ? [{ name: activeCategory.name, path: `/products?category=${activeCategory.slug}` }]
-      : []),
   ]);
 
   return (
     <>
-      <script
-        type="application/ld+json"
-        // eslint-disable-next-line react/no-danger
-        dangerouslySetInnerHTML={jsonLdScript(itemListJsonLd(list))}
-      />
       <script
         type="application/ld+json"
         // eslint-disable-next-line react/no-danger
@@ -85,29 +51,45 @@ export default async function ProductsPage({
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">{siteConfig.amazonStoreName}</span>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-charcoal-900 sm:text-5xl">
-              {activeCategory ? activeCategory.name : "The Zevrian Catalog"}
+              Product Preview
             </h1>
             <p className="mt-4 text-base leading-relaxed text-charcoal-500 sm:text-lg">
-              {activeCategory
-                ? activeCategory.description
-                : "Premium essentials across kitchen, home, and travel — each one engineered to be a pleasure to own."}
+              The products displayed on this website represent Zevrian&apos;s
+              planned product categories. Final product selection and
+              specifications will be confirmed at launch.
             </p>
           </div>
         </Container>
       </section>
 
-      {/* Catalog */}
+      {/* Category cards */}
       <section className="py-12 sm:py-16">
         <Container>
-          <ProductFilter active={active} />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            {categories.map((category) => (
+              <div
+                key={category.slug}
+                className="relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-charcoal-100 p-7"
+              >
+                <div
+                  className={`absolute inset-0 bg-gradient-to-br ${
+                    categoryAccent[category.slug] ?? "from-stone-100 to-stone-300"
+                  }`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/55 via-charcoal-900/5 to-transparent" />
 
-          <p className="mt-8 text-center text-sm text-charcoal-400">
-            Showing {list.length} {list.length === 1 ? "product" : "products"}
-          </p>
-
-          <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {list.map((product) => (
-              <ProductCard key={product.slug} product={product} />
+                <div className="relative">
+                  <span className="inline-flex items-center gap-1.5 rounded-full bg-gold/20 px-3 py-1 text-xs font-semibold text-gold-light">
+                    Launching Q3 2026
+                  </span>
+                  <h3 className="mt-3 text-2xl font-semibold text-white">
+                    {category.name}
+                  </h3>
+                  <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/80">
+                    {category.description}
+                  </p>
+                </div>
+              </div>
             ))}
           </div>
         </Container>

@@ -23,6 +23,7 @@ export function Footer() {
             >
               Coming Soon on Amazon
             </button>
+            <p className="mt-1.5 text-xs text-charcoal-400">Launching Q3 2026</p>
           </div>
 
           <FooterColumn title="Shop" links={footerLinks.shop} />

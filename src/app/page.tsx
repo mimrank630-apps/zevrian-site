@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { ProductCard } from "@/components/ProductCard";
 import { CategoryCard } from "@/components/CategoryCard";
 import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { TrustBar } from "@/components/TrustBar";
@@ -9,7 +8,7 @@ import { BrandPhilosophyStrip } from "@/components/sections/BrandPhilosophyStrip
 import { AmazonTrustSection } from "@/components/sections/AmazonTrustSection";
 import { SocialProof } from "@/components/sections/SocialProof";
 import { FaqSection } from "@/components/sections/FaqSection";
-import { categories, getFeaturedProducts } from "@/lib/products";
+import { categories } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 
 const trustPoints = [
@@ -36,8 +35,6 @@ const trustPoints = [
 ];
 
 export default function HomePage() {
-  const featured = getFeaturedProducts(6);
-
   return (
     <>
       {/* Hero */}
@@ -51,7 +48,7 @@ export default function HomePage() {
               Essentials, designed for the life you deserve.
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-charcoal-300">
-              Precision-engineered kitchen, home, and travel products that
+              Precision-engineered kitchen, home, and office products that
               elevate every moment — designed with intention by {siteConfig.name}{" "}
               and launching soon through our {siteConfig.amazonStoreName}{" "}
               storefront on Amazon.
@@ -140,37 +137,12 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Collections"
-            title="Five collections, one standard"
-            description="A curated catalog organized around the spaces and moments where good design matters most."
+            title="Three collections, one standard"
+            description="A curated catalog organized around the spaces where good design matters most."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
               <CategoryCard key={category.slug} category={category} />
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      {/* Featured products */}
-      <section className="py-20 sm:py-28">
-        <Container>
-          <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-end">
-            <SectionHeading
-              align="left"
-              eyebrow="Featured"
-              title="Pieces worth the counter space"
-              description="A selection of standouts from across the Zevrian catalog."
-            />
-            <Link
-              href="/products"
-              className="btn btn-secondary shrink-0 !py-3 text-xs"
-            >
-              View all products
-            </Link>
-          </div>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {featured.map((product) => (
-              <ProductCard key={product.slug} product={product} />
             ))}
           </div>
         </Container>
