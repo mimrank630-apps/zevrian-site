@@ -160,8 +160,8 @@ export default async function ProductDetailPage({
                 <AmazonButton href={product.amazonUrl} fullWidth tone="gold" />
                 <BuyDirectButton product={product} />
                 <p className="text-center text-xs text-charcoal-400">
-                  Primary purchases are fulfilled by Amazon via{" "}
-                  {siteConfig.amazonStoreName}. Buy Direct is a preview checkout.
+                  Purchases will be fulfilled by Amazon via{" "}
+                  {siteConfig.amazonStoreName}, launching Q3 2026.
                 </p>
               </div>
 
