@@ -22,7 +22,7 @@ const promises = [
   {
     title: "Responsive support",
     detail:
-      "Real people, not bots. Reach us by email or WhatsApp and we reply within one business day.",
+      "Real people, not bots. Reach us by email or contact form and we reply within one business day.",
     icon: <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10Z" />,
   },
   {

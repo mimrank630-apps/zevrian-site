@@ -1,0 +1,24 @@
+{
+  "id": "FEAT-001",
+  "type": "fix",
+  "description": "Remove all WhatsApp references completely (FIX 1), update FAQ and SocialProof text to remove WhatsApp mentions, remove the WhatsAppButton component import and usage from layout.tsx, and remove WhatsApp config from site.ts.",
+  "status": "in_progress",
+  "steps": [
+    "1. src/app/layout.tsx: Remove the import of WhatsAppButton and remove <WhatsAppButton /> from the JSX body.",
+    "2. src/lib/site.ts: Remove the whatsappNumber and whatsappUrl properties from siteConfig (and the associated TODO comment).",
+    "3. src/components/sections/FaqSection.tsx: Change the 'How can I contact Zevrian?' answer from `You can email us at ${siteConfig.email}, use the contact form, or message us on WhatsApp. We reply within one business day.` to `You can email us at info@zevrian.com or use the contact form on our contact page. We reply within one business day.`",
+    "4. src/components/sections/SocialProof.tsx: Change the 'Responsive support' detail from 'Real people, not bots. Reach us by email or WhatsApp and we reply within one business day.' to 'Real people, not bots. Reach us by email or contact form and we reply within one business day.'",
+    "5. Do NOT delete the WhatsAppButton.tsx file yet (it can remain unused for now to avoid breaking any other potential references). But if desired, it can be deleted since it's only imported in layout.tsx."
+  ],
+  "acceptance_criteria": [
+    "No references to WhatsApp, wa.me, or WhatsAppButton exist in active code paths",
+    "FAQ answer about contact mentions email and contact form only",
+    "SocialProof mentions email or contact form instead of WhatsApp",
+    "layout.tsx no longer imports or renders WhatsAppButton"
+  ],
+  "verification": [
+    "grep -ri 'whatsapp\\|wa\\.me' src/ should return zero results (or only the unused component file if kept)"
+  ],
+  "blocked_reason": null,
+  "findings": ""
+}

@@ -26,7 +26,7 @@ export const faqs = [
   },
   {
     q: "How can I contact Zevrian?",
-    a: `You can email us at ${siteConfig.email}, use the contact form, or message us on WhatsApp. We reply within one business day.`,
+    a: `You can email us at info@zevrian.com or use the contact form on our contact page. We reply within one business day.`,
   },
 ];
 

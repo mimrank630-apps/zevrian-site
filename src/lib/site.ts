@@ -13,12 +13,6 @@ export const siteConfig = {
   email: "info@zevrian.com",
   amazonStoreName: "Zevrian Direct",
   amazonStoreUrl: "https://www.amazon.com/stores/zevrian",
-  // ⚠️ TODO [PRE-LAUNCH]: Replace the placeholder WhatsApp number below with the
-  // real Zevrian business WhatsApp number before going live. Current value is
-  // +1 (555) 555-5555 which is NOT a valid number.
-  whatsappNumber: "15555555555",
-  whatsappUrl:
-    "https://wa.me/15555555555?text=Hi%20Zevrian%2C%20I%20have%20a%20question%20about%20your%20products.",
   address: {
     line1: "30 N Gould St Ste N",
     city: "Sheridan",
