@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and travel essentials through Amazon FBA under Zevrian Direct.",
+    "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and office essentials through Amazon FBA under Zevrian Direct.",
   keywords: [
     "Zevrian about",
     "brand story",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About — Zevrian",
     description:
-      "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and travel essentials through Amazon FBA under Zevrian Direct.",
+      "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and office essentials through Amazon FBA under Zevrian Direct.",
     url: `${siteConfig.url}/about`,
     type: "website",
   },
@@ -85,7 +85,7 @@ export default function AboutPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
               {siteConfig.legalName} is an Amazon FBA wholesale business creating
-              premium essentials for the kitchen, home, and travel.
+              premium essentials for the kitchen, home, and office.
               We exist to bring intention and quality back to the objects people
               use every day.
             </p>

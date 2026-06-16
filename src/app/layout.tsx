@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     "Amazon FBA",
     "premium kitchen products",
     "home organization",
-    "travel essentials",
+    "office essentials",
   ],
   authors: [{ name: siteConfig.legalName }],
   creator: siteConfig.legalName,
