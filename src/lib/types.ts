@@ -1,7 +1,10 @@
 export type CategorySlug =
-  | "kitchen-dining"
-  | "home-organization"
-  | "office-products";
+  | "sports-outdoors"
+  | "arts-crafts"
+  | "home-kitchen"
+  | "home-improvement"
+  | "office-products"
+  | "pet-supplies";
 
 export interface Category {
   slug: CategorySlug;

@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and office essentials through Amazon FBA under Zevrian Direct.",
+    "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
   keywords: [
     "Zevrian about",
     "brand story",
@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "About — Zevrian",
     description:
-      "Zevrian Global LLC is a Wyoming-registered e-commerce company launching premium kitchen, home, and office essentials through Amazon FBA under Zevrian Direct.",
+      "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
     url: `${siteConfig.url}/about`,
     type: "website",
   },
@@ -28,19 +28,19 @@ export const metadata: Metadata = {
 
 const values = [
   {
-    title: "Restraint",
+    title: "Authenticity",
     detail:
-      "We make fewer things and make them better. A focused catalog means every product earns its place.",
+      "We buy only from brands and authorized distributors. Every product we sell is genuine.",
   },
   {
-    title: "Materials first",
+    title: "Brand respect",
     detail:
-      "We specify materials we'd want in our own homes and hold our partners to that standard.",
+      "We follow MAP and pricing policies and keep every listing accurate and well presented.",
   },
   {
     title: "Honest value",
     detail:
-      "Premium doesn't have to mean inflated. We price fairly for the quality we deliver.",
+      "Fair prices, accurate descriptions and no fake reviews or false urgency.",
   },
   {
     title: "Customer obsession",
@@ -52,23 +52,23 @@ const values = [
 const roadmap = [
   {
     phase: "Phase 01",
-    title: "Amazon FBA foundation",
+    title: "Amazon FBA wholesale",
     detail:
-      "Launch a curated catalog through our Zevrian Direct storefront, leaning on Amazon's world-class fulfillment and customer trust.",
+      "Build a focused catalog of authentic branded products through our Zevrian Direct storefront, using Amazon's fulfillment and customer trust.",
     status: "Current",
   },
   {
     phase: "Phase 02",
-    title: "Private label expansion",
+    title: "Deeper brand partnerships",
     detail:
-      "Deepen each collection with thoughtfully engineered additions, building brand recognition and loyal repeat customers.",
+      "Grow long-term relationships with each brand we carry, adding more of their range and keeping it reliably in stock.",
     status: "Planned",
   },
   {
     phase: "Phase 03",
-    title: "Global lifestyle brand",
+    title: "More categories",
     detail:
-      "Grow Zevrian into a destination brand with direct retail, international availability, and a community around considered living.",
+      "Expand into new categories and marketplaces while keeping the same standards for authenticity and service.",
     status: "Ahead",
   },
 ];
@@ -81,13 +81,13 @@ export default function AboutPage() {
           <div className="max-w-3xl">
             <span className="eyebrow text-gold-light">About {siteConfig.name}</span>
             <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              We build fewer things, better.
+              Authentic brands, sold with care.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
-              {siteConfig.legalName} is an Amazon FBA wholesale business creating
-              premium essentials for the kitchen, home, and office.
-              We exist to bring intention and quality back to the objects people
-              use every day.
+              {siteConfig.legalName} is an Amazon FBA wholesale retailer. We buy
+              authentic products from established brands and their authorized
+              distributors and sell them to US customers through our{" "}
+              {siteConfig.amazonStoreName} storefront on Amazon.
             </p>
           </div>
         </Container>
@@ -100,15 +100,15 @@ export default function AboutPage() {
             <div className="card p-9">
               <span className="eyebrow">Mission</span>
               <p className="mt-4 text-xl font-medium leading-relaxed text-charcoal-800">
-                To design and deliver premium everyday essentials that feel
-                considered in the hand and earn their place in the home.
+                To give US customers easy access to genuine branded products,
+                delivered fast through Amazon.
               </p>
             </div>
             <div className="card p-9">
               <span className="eyebrow">Vision</span>
               <p className="mt-4 text-xl font-medium leading-relaxed text-charcoal-800">
-                To grow Zevrian from a trusted Amazon brand into a global name
-                synonymous with quiet, durable, design-led living.
+                To be the reseller brands choose first: reliable, careful with
+                their name, and easy to work with.
               </p>
             </div>
           </div>
@@ -120,8 +120,8 @@ export default function AboutPage() {
         <Container>
           <SectionHeading
             eyebrow="The roadmap"
-            title="From Amazon to a global brand"
-            description="A deliberate path: establish trust through fulfillment, deepen the catalog, then build the brand."
+            title="Where we are going"
+            description="A steady path built on trust with customers and brands."
           />
           <div className="mt-14 grid gap-6 lg:grid-cols-3">
             {roadmap.map((step) => (
@@ -176,8 +176,8 @@ export default function AboutPage() {
               </p>
               <p className="mt-4 text-base leading-relaxed text-charcoal-600">
                 The company is incorporated in Wyoming, USA, as a registered Limited
-                Liability Company focused on Amazon FBA wholesale and private-label
-                operations for the U.S. market.
+                Liability Company focused on Amazon FBA wholesale for the U.S.
+                market.
               </p>
               <dl className="mt-6 grid gap-4 sm:grid-cols-2">
                 <div>
@@ -207,11 +207,11 @@ export default function AboutPage() {
         <Container>
           <div className="flex flex-col items-center gap-6 text-center">
             <h2 className="text-2xl font-semibold tracking-tight text-charcoal-900 sm:text-3xl">
-              Preview our planned catalog.
+              See what we sell.
             </h2>
             <div className="flex flex-col gap-3 sm:flex-row">
               <Link href="/products" className="btn btn-primary">
-                Browse the catalog
+                Our categories
               </Link>
               <Link href="/brand" className="btn btn-secondary">
                 See our brand identity

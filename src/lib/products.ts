@@ -2,25 +2,41 @@ import type { Category, CategorySlug, Product } from "@/lib/types";
 
 export const categories: Category[] = [
   {
-    slug: "kitchen-dining",
-    name: "Kitchen & Dining",
-    tagline: "Culinary tools, refined.",
+    slug: "sports-outdoors",
+    name: "Sports & Outdoors",
+    tagline: "Gear from established brands.",
     description:
-      "Precision culinary tools and modern dining essentials engineered for everyday use.",
+      "Swim, fitness, fishing and outdoor gear from established brands.",
   },
   {
-    slug: "home-organization",
-    name: "Home Organization",
-    tagline: "Order, beautifully kept.",
-    description:
-      "Minimalist storage and workspace solutions that bring calm and clarity to any space.",
+    slug: "arts-crafts",
+    name: "Arts & Crafts",
+    tagline: "Supplies makers rely on.",
+    description: "Jewelry-making, beading and craft supplies.",
+  },
+  {
+    slug: "home-kitchen",
+    name: "Home & Kitchen",
+    tagline: "Everyday essentials.",
+    description: "Everyday home and kitchen essentials.",
+  },
+  {
+    slug: "home-improvement",
+    name: "Home Improvement",
+    tagline: "Tools for the job.",
+    description: "Tools, hardware and household fixes.",
   },
   {
     slug: "office-products",
     name: "Office Products",
-    tagline: "Focus, by design.",
-    description:
-      "Premium workspace essentials designed for productivity and modern work environments.",
+    tagline: "Write, plan, organize.",
+    description: "Writing instruments, desk and office supplies.",
+  },
+  {
+    slug: "pet-supplies",
+    name: "Pet Supplies",
+    tagline: "For every companion.",
+    description: "Feeding accessories, toys and care products for pets.",
   },
 ];
 

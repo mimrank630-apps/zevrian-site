@@ -11,9 +11,9 @@ export function BrandPhilosophyStrip() {
         <div className="mx-auto max-w-4xl text-center">
           <span className="eyebrow">We believe</span>
           <p className="mt-5 text-balance text-2xl font-semibold leading-snug tracking-tight text-charcoal-900 sm:text-3xl">
-            The objects you use every day should be beautiful, functional, and
-            built with intention. Most brands chase volume.{" "}
-            <span className="text-gold-600">Zevrian chases legacy.</span>
+            Customers deserve genuine products, accurate listings and fast
+            delivery. Brands deserve resellers who protect their name.{" "}
+            <span className="text-gold-600">Zevrian does both.</span>
           </p>
         </div>
       </Container>

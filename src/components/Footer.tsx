@@ -12,21 +12,18 @@ export function Footer() {
           <div>
             <Logo variant="light" />
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-charcoal-300">
-              {siteConfig.tagline} Premium essentials, launching soon
-              on Amazon under {siteConfig.amazonStoreName}.
+              {siteConfig.tagline} Genuine branded products sold on Amazon
+              under {siteConfig.amazonStoreName}.
             </p>
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="btn cursor-not-allowed opacity-60 bg-charcoal-700 text-charcoal-400 mt-6 !px-5 !py-2.5 text-xs"
+            <Link
+              href="/contact"
+              className="btn btn-gold mt-6 !px-5 !py-2.5 text-xs"
             >
-              Coming Soon on Amazon
-            </button>
-            <p className="mt-1.5 text-xs text-charcoal-400">Launching Q3 2026</p>
+              Brand Partnerships
+            </Link>
           </div>
 
-          <FooterColumn title="Shop" links={footerLinks.shop} />
+          <FooterColumn title="Categories" links={footerLinks.shop} />
           <FooterColumn title="Company" links={footerLinks.company} />
 
           <div>
@@ -77,10 +74,9 @@ export function Footer() {
         </div>
 
         <p className="mt-6 text-xs leading-relaxed text-charcoal-500">
-          {siteConfig.legalName} operates an Amazon FBA wholesale
-          business. Products will be available through our
-          {" "}
-          {siteConfig.amazonStoreName} storefront on Amazon, launching Q3 2026. Address shown is
+          {siteConfig.legalName} is an Amazon FBA wholesale retailer of
+          authentic branded products, sold through our{" "}
+          {siteConfig.amazonStoreName} storefront on Amazon. Address shown is
           the registered principal address: {fullAddress}.
         </p>
       </div>

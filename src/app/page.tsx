@@ -13,24 +13,24 @@ import { siteConfig } from "@/lib/site";
 
 const trustPoints = [
   {
-    title: "Design-led",
+    title: "Authentic only",
     detail:
-      "Every product begins with a question: how can this be more considered, more useful, more beautiful?",
+      "We buy directly from brands and their authorized distributors — never from unverified sources.",
   },
   {
-    title: "Premium materials",
+    title: "Brand-friendly",
     detail:
-      "We specify the materials we'd want in our own homes — and hold our manufacturing partners to them.",
+      "We respect MAP and pricing policies, keep listings accurate, and protect each brand's presentation.",
   },
   {
     title: "Backed on Amazon",
     detail:
-      "Our Zevrian Direct storefront launches Q3 2026, with Amazon fulfillment and returns.",
+      "Our Zevrian Direct storefront uses Amazon fulfillment, buyer protection and returns.",
   },
   {
     title: "Independently owned",
     detail:
-      "A Wyoming-registered company building a focused catalog of essentials — not a sprawling marketplace.",
+      "A Wyoming-registered company with a focused, carefully selected catalog.",
   },
 ];
 
@@ -43,32 +43,25 @@ export default function HomePage() {
         <div className="absolute inset-0 opacity-[0.04] [background-image:linear-gradient(white_1px,transparent_1px),linear-gradient(90deg,white_1px,transparent_1px)] [background-size:64px_64px]" />
         <Container className="relative py-24 sm:py-32 lg:py-40">
           <div className="max-w-3xl animate-fade-up">
-            <span className="eyebrow text-gold-light">Amazon FBA</span>
+            <span className="eyebrow text-gold-light">Amazon FBA Wholesale Retailer</span>
             <h1 className="mt-5 text-balance text-4xl font-semibold leading-[1.05] tracking-tight text-white sm:text-6xl lg:text-7xl">
-              Essentials, designed for the life you deserve.
+              Authentic brands. Delivered by Amazon.
             </h1>
             <p className="mt-6 max-w-xl text-balance text-lg leading-relaxed text-charcoal-300">
-              Precision-engineered kitchen, home, and office products that
-              elevate every moment — designed with intention by {siteConfig.name}{" "}
-              and launching soon through our {siteConfig.amazonStoreName}{" "}
-              storefront on Amazon.
+              {siteConfig.legalName} is a US online retailer of genuine branded
+              products, sold to customers across the United States through our{" "}
+              {siteConfig.amazonStoreName} storefront on Amazon.
             </p>
-            <span className="mt-5 inline-flex items-center gap-2 rounded-full bg-gold/20 px-4 py-2 text-sm font-semibold text-gold-light">
-              <span aria-hidden="true">🚀</span>
-              Launching on Amazon — Q3 2026
-            </span>
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <Link href="/products" className="btn btn-gold">
-                Explore the catalog
+                Our categories
               </Link>
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="btn cursor-not-allowed opacity-60 !border-charcoal-700 !bg-transparent !text-charcoal-400"
+              <Link
+                href="/contact"
+                className="btn !border-charcoal-600 !bg-transparent !text-white hover:!border-gold"
               >
-                Coming Soon on Amazon
-              </button>
+                Brand partnerships
+              </Link>
             </div>
           </div>
         </Container>
@@ -85,30 +78,28 @@ export default function HomePage() {
         <Container>
           <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-20">
             <div>
-              <span className="eyebrow">Our vision</span>
+              <span className="eyebrow">What we do</span>
               <h2 className="mt-3 text-3xl font-semibold tracking-tight text-charcoal-900 sm:text-4xl">
-                Modern living, elevated by design.
+                A reseller brands can trust.
               </h2>
               <div className="mt-6 space-y-4 text-base leading-relaxed text-charcoal-500">
                 <p>
-                  {siteConfig.legalName} is a modern lifestyle brand built on a
-                  simple belief: the objects we use every day should be a
-                  pleasure to own. We obsess over the details others overlook —
-                  the weight of a handle, the close of a lid, the grain of a
-                  finish.
+                  {siteConfig.legalName} buys authentic products directly from
+                  brands and their authorized distributors and sells them to
+                  US customers on Amazon. Every item is new, genuine and
+                  stored and shipped by Amazon&rsquo;s fulfillment network.
                 </p>
                 <p>
-                  As a focused Amazon FBA wholesale business, we develop a tight,
-                  intentional catalog rather than chasing trends. Each product
-                  is engineered with premium materials and will be available through
-                  Amazon fulfillment upon launch.
+                  For brands, we are a careful partner: we follow MAP and
+                  pricing policies, keep listings accurate, and keep stock
+                  levels steady so customers can always find your products.
                 </p>
               </div>
               <Link
                 href="/about"
                 className="mt-7 inline-flex items-center gap-1.5 text-sm font-semibold text-charcoal-900 transition-colors hover:text-gold-600"
               >
-                Read our story
+                About the company
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                   <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
@@ -123,7 +114,7 @@ export default function HomePage() {
               </div>
               <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/70 p-5 backdrop-blur-sm">
                 <p className="font-display text-lg text-charcoal-900">
-                  &ldquo;Build fewer things, better.&rdquo;
+                  &ldquo;Genuine products. Honest selling.&rdquo;
                 </p>
                 <p className="mt-1 text-sm text-charcoal-500">The Zevrian principle</p>
               </div>
@@ -136,9 +127,9 @@ export default function HomePage() {
       <section className="bg-charcoal-50 py-20 sm:py-28">
         <Container>
           <SectionHeading
-            eyebrow="Collections"
-            title="Three collections, one standard"
-            description="A curated catalog organized around the spaces where good design matters most."
+            eyebrow="Categories"
+            title="What we sell"
+            description="A focused catalog of authentic products from established brands."
           />
           <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
@@ -153,8 +144,8 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Why Zevrian"
-            title="A brand built on restraint"
-            description="We'd rather make a handful of products exceptionally well than a thousand that are merely fine."
+            title="How we work"
+            description="Simple standards for customers and brand partners alike."
           />
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-charcoal-100 bg-charcoal-100 sm:grid-cols-2 lg:grid-cols-4">
             {trustPoints.map((point, i) => (
@@ -187,8 +178,8 @@ export default function HomePage() {
           <div className="flex flex-col items-center text-center">
             <SectionHeading
               eyebrow="Stay in the loop"
-              title="New arrivals, first."
-              description="Be the first to know about launches, restocks, and curated lifestyle notes from the Zevrian team."
+              title="Stay updated."
+              description="Occasional updates on new products and restocks from the Zevrian team."
             />
             <div className="mt-8 flex justify-center">
               <NewsletterForm />

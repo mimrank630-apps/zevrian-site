@@ -62,8 +62,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <button type="button" disabled aria-disabled="true" className="btn cursor-not-allowed opacity-60 bg-charcoal-200 text-charcoal-500 !px-5 !py-2.5 text-xs">Coming Soon on Amazon</button>
-          <p className="mt-1 text-center text-xs text-charcoal-400">Launching Q3 2026</p>
+          <Link href="/contact" className="btn btn-gold !px-5 !py-2.5 text-xs">Brand Partnerships</Link>
         </div>
 
         <button
@@ -111,8 +110,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <button type="button" disabled aria-disabled="true" className="btn cursor-not-allowed opacity-60 bg-charcoal-200 text-charcoal-500 mt-2 w-full">Coming Soon on Amazon</button>
-          <p className="mt-1 text-center text-xs text-charcoal-400">Launching Q3 2026</p>
+          <Link href="/contact" className="btn btn-gold mt-2 w-full">Brand Partnerships</Link>
         </div>
       </div>
     </header>

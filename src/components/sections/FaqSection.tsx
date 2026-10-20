@@ -5,8 +5,8 @@ import { faqJsonLd, jsonLdScript } from "@/lib/seo";
 
 export const faqs = [
   {
-    q: "Where can I buy Zevrian products?",
-    a: `Zevrian products will be available through our ${siteConfig.amazonStoreName} storefront on Amazon, launching Q3 2026. Each product page will link directly to its Amazon listing.`,
+    q: "Where can I buy from Zevrian?",
+    a: `We sell through our ${siteConfig.amazonStoreName} storefront on Amazon. Orders are stored, packed and shipped by Amazon's fulfillment network.`,
   },
   {
     q: "Is Zevrian a real company?",
@@ -21,8 +21,12 @@ export const faqs = [
     a: "Returns and refunds are handled through Amazon's standard return policy and A-to-z Guarantee, so every purchase is protected.",
   },
   {
-    q: "Are you a wholesaler or distributor?",
-    a: "Zevrian currently operates as an Amazon FBA wholesale business, with plans to expand into private label in the future. Manufacturers and supply-chain partners are welcome to reach us through the supplier form on our contact page.",
+    q: "Are your products authentic?",
+    a: "Yes. We buy only from brands and their authorized distributors, never from unverified or grey-market sources. Every item we sell is new and genuine.",
+  },
+  {
+    q: "I represent a brand. How can we work together?",
+    a: "We welcome wholesale partnerships with established brands. We respect MAP and pricing policies, keep listings accurate, and maintain steady stock. Email info@zevrian.com or use the supplier form on our contact page.",
   },
   {
     q: "How can I contact Zevrian?",
@@ -42,7 +46,7 @@ export function FaqSection() {
         <SectionHeading
           eyebrow="Questions"
           title="Frequently asked questions"
-          description="Everything you need to know about buying from a new, honest brand."
+          description="Everything you need to know about Zevrian Global LLC."
         />
         <dl className="mx-auto mt-12 max-w-3xl divide-y divide-charcoal-200">
           {faqs.map((faq) => (

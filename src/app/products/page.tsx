@@ -7,28 +7,32 @@ import { breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Zevrian Global LLC is preparing to launch premium kitchen, home, and office essentials through Amazon FBA under the Zevrian Direct storefront.",
+    "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
   keywords: [
     "Zevrian products",
-    "premium kitchen tools",
-    "home organization",
+    "sports and outdoors",
+    "arts and crafts",
     "office products",
-    "Amazon FBA brand",
+    "pet supplies",
+    "Amazon FBA wholesale",
   ],
   alternates: { canonical: "/products" },
   openGraph: {
     title: "Products — Zevrian",
     description:
-      "Zevrian's planned product categories for our upcoming Amazon launch under Zevrian Direct.",
+      "The product categories Zevrian Global LLC sells on Amazon under Zevrian Direct.",
     url: `${siteConfig.url}/products`,
     type: "website",
   },
 };
 
 const categoryAccent: Record<string, string> = {
-  "kitchen-dining": "from-amber-100 via-stone-100 to-stone-300",
-  "home-organization": "from-stone-100 via-neutral-100 to-zinc-300",
+  "sports-outdoors": "from-sky-100 via-slate-100 to-zinc-300",
+  "arts-crafts": "from-amber-100 via-stone-100 to-stone-300",
+  "home-kitchen": "from-stone-100 via-neutral-100 to-zinc-300",
+  "home-improvement": "from-zinc-100 via-stone-200 to-zinc-400",
   "office-products": "from-sky-50 via-slate-100 to-zinc-300",
+  "pet-supplies": "from-emerald-50 via-stone-100 to-stone-300",
 };
 
 export default function ProductsPage() {
@@ -51,12 +55,12 @@ export default function ProductsPage() {
           <div className="mx-auto max-w-2xl text-center">
             <span className="eyebrow">{siteConfig.amazonStoreName}</span>
             <h1 className="mt-3 text-4xl font-semibold tracking-tight text-charcoal-900 sm:text-5xl">
-              Product Preview
+              Our Categories
             </h1>
             <p className="mt-4 text-base leading-relaxed text-charcoal-500 sm:text-lg">
-              The products displayed on this website represent Zevrian&apos;s
-              planned product categories. Final product selection and
-              specifications will be confirmed at launch.
+              We sell authentic products from established brands across six
+              categories, sourced directly from brands and their authorized
+              distributors.
             </p>
           </div>
         </Container>
@@ -79,10 +83,7 @@ export default function ProductsPage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/55 via-charcoal-900/5 to-transparent" />
 
                 <div className="relative">
-                  <span className="inline-flex items-center gap-1.5 rounded-full bg-gold/20 px-3 py-1 text-xs font-semibold text-gold-light">
-                    Launching Q3 2026
-                  </span>
-                  <h3 className="mt-3 text-2xl font-semibold text-white">
+                  <h3 className=" text-2xl font-semibold text-white">
                     {category.name}
                   </h3>
                   <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/80">

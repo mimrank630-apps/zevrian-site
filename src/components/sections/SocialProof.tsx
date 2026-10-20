@@ -10,7 +10,7 @@ const promises = [
   {
     title: "No hype, ever",
     detail:
-      "No fake reviews, no countdown timers, no false urgency. Just honest products and honest information.",
+      "No fake reviews, no countdown timers, no false urgency. Just genuine products and honest information.",
     icon: <path d="M9 12l2 2 4-4M12 3l7 4v5c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V7l7-4Z" />,
   },
   {
@@ -40,7 +40,7 @@ export function SocialProof() {
         <SectionHeading
           eyebrow="The Zevrian promise"
           title="Built on trust, not hype"
-          description="We're a new brand — so instead of borrowed credibility, we lead with the things you can actually verify."
+          description="We lead with the things you can actually verify."
         />
         <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-charcoal-100 bg-charcoal-100 sm:grid-cols-2 lg:grid-cols-4">
           {promises.map((promise) => (

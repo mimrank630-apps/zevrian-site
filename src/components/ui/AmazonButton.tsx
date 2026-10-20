@@ -1,5 +1,5 @@
 interface AmazonButtonProps {
-  /** @deprecated Pre-launch: href is intentionally ignored. All buttons are disabled until Q3 2026 launch. */
+  /** @deprecated href is intentionally ignored; storefront link not yet public. */
   href?: string;
   className?: string;
   tone?: "gold" | "dark" | "outline";
@@ -10,7 +10,7 @@ interface AmazonButtonProps {
 export function AmazonButton({
   className = "",
   tone = "gold",
-  label = "Coming Soon on Amazon",
+  label = "Zevrian Direct on Amazon",
   fullWidth = false,
 }: AmazonButtonProps) {
   return (
@@ -27,7 +27,6 @@ export function AmazonButton({
         </svg>
         {label}
       </button>
-      <p className="mt-1.5 text-center text-xs text-charcoal-400">Available Q3 2026</p>
     </div>
   );
 }

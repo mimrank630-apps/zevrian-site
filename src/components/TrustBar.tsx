@@ -14,8 +14,8 @@ const signals = [
     icon: <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />,
   },
   {
-    label: "Premium Materials",
-    detail: "Engineered to last",
+    label: "100% Authentic",
+    detail: "Sourced from brands & authorized distributors",
     icon: <path d="m12 2 2.4 7.4H22l-6 4.6 2.3 7.4-6.3-4.6L5.7 21 8 14 2 9.4h7.6L12 2Z" />,
   },
 ];

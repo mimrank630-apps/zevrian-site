@@ -6,9 +6,9 @@
 export const siteConfig = {
   name: "Zevrian",
   legalName: "Zevrian Global LLC",
-  tagline: "Considered essentials for modern living.",
+  tagline: "Authentic brands, delivered by Amazon.",
   description:
-    "Zevrian Global LLC is a Wyoming-registered e-commerce company preparing to launch premium kitchen, home, and office essentials through Amazon FBA under the Zevrian Direct storefront.",
+    "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zevrian.com",
   email: "info@zevrian.com",
   amazonStoreName: "Zevrian Direct",
@@ -38,10 +38,12 @@ export const navLinks = [
 
 export const footerLinks = {
   shop: [
-    { label: "All Products", href: "/products" },
-    { label: "Kitchen & Dining", href: "/products?category=kitchen-dining" },
-    { label: "Home Organization", href: "/products?category=home-organization" },
-    { label: "Office Products", href: "/products?category=office-products" },
+    { label: "All Categories", href: "/products" },
+    { label: "Sports & Outdoors", href: "/products" },
+    { label: "Arts & Crafts", href: "/products" },
+    { label: "Home & Kitchen", href: "/products" },
+    { label: "Office Products", href: "/products" },
+    { label: "Pet Supplies", href: "/products" },
   ],
   company: [
     { label: "About", href: "/about" },
