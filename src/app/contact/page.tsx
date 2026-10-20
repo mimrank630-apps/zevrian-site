@@ -115,14 +115,9 @@ export default function ContactPage() {
               <h3 className="text-xs font-semibold uppercase tracking-luxe text-gold-600">
                 Shop
               </h3>
-              <a
-                href={siteConfig.amazonStoreUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-3 inline-block text-sm text-charcoal-600 transition-colors hover:text-gold-600"
-              >
-                {siteConfig.amazonStoreName} on Amazon
-              </a>
+              <p className="mt-3 text-sm text-charcoal-600">
+                {siteConfig.amazonStoreName} storefront on Amazon
+              </p>
             </div>
           </div>
         </Container>

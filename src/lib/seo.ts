@@ -17,7 +17,7 @@ export function organizationJsonLd() {
     alternateName: siteConfig.name,
     url: BASE,
     email: siteConfig.email,
-    logo: abs("/favicon.svg"),
+    logo: abs("/logo-512.png"),
     image: abs(siteConfig.ogImage),
     description: siteConfig.description,
     foundingLocation: siteConfig.address.stateLong,
@@ -32,11 +32,10 @@ export function organizationJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.email,
-      contactType: "customer support",
+      contactType: "sales",
       areaServed: "Worldwide",
       availableLanguage: ["English"],
     },
-    sameAs: [siteConfig.amazonStoreUrl],
   };
 }
 

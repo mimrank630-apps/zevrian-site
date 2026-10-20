@@ -23,7 +23,7 @@ export const siteConfig = {
   },
   filingId: "2026-001998631",
   incorporatedDate: "June 5, 2026",
-  ogImage: "/og-image.svg",
+  ogImage: "/og-image.png",
 } as const;
 
 export const fullAddress = `${siteConfig.address.line1}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}`;
