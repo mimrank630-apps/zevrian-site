@@ -42,6 +42,7 @@ export const footerLinks = {
     { label: "Sports & Outdoors", href: "/products" },
     { label: "Arts & Crafts", href: "/products" },
     { label: "Home & Kitchen", href: "/products" },
+    { label: "Home Improvement", href: "/products" },
     { label: "Office Products", href: "/products" },
     { label: "Pet Supplies", href: "/products" },
   ],

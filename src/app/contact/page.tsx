@@ -7,12 +7,12 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Get in touch with Zevrian Global LLC. Customer support for product questions, and a dedicated intake for suppliers and manufacturing partners.",
+    "Get in touch with Zevrian Global LLC. Customer support for product questions, and a dedicated intake for brands and authorized distributors.",
   keywords: [
     "contact Zevrian",
     "customer support",
     "supplier inquiry",
-    "manufacturing partner",
+    "brand partnership",
     "Zevrian Global LLC contact",
   ],
   alternates: { canonical: "/contact" },
@@ -36,7 +36,7 @@ export default function ContactPage() {
               We&rsquo;d love to hear from you.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
-              Whether you&rsquo;re a customer with a question or a manufacturer
+              Whether you&rsquo;re a customer with a question or a brand
               who&rsquo;d like to work with us, use the right form below and our
               team will respond promptly.
             </p>
@@ -67,13 +67,13 @@ export default function ContactPage() {
 
             {/* Supplier / Partner */}
             <div className="card p-8 sm:p-10">
-              <span className="eyebrow">For suppliers</span>
+              <span className="eyebrow">For brands</span>
               <h2 className="mt-3 text-2xl font-semibold tracking-tight text-charcoal-900">
-                Supplier &amp; Partner Inquiries
+                Brand &amp; Wholesale Partnerships
               </h2>
               <p className="mt-2 text-sm leading-relaxed text-charcoal-500">
-                A dedicated intake for global manufacturers and supply chain
-                partners. Tell us what you make and how you work.
+                For brands and authorized distributors interested in a
+                wholesale partnership. We respect MAP and pricing policies.
               </p>
               <div className="mt-8">
                 <SupplierForm />

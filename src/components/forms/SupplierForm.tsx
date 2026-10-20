@@ -75,7 +75,7 @@ export function SupplierForm() {
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="sp-company" className="field-label">Company name *</label>
-          <input id="sp-company" name="company" className="field-input" placeholder="Manufacturer Co." required />
+          <input id="sp-company" name="company" className="field-input" placeholder="Brand or distributor name" required />
         </div>
         <div>
           <label htmlFor="sp-contact" className="field-label">Contact name *</label>
@@ -105,8 +105,8 @@ export function SupplierForm() {
           </select>
         </div>
         <div>
-          <label htmlFor="sp-capabilities" className="field-label">Manufacturing capabilities</label>
-          <input id="sp-capabilities" name="capabilities" className="field-input" placeholder="e.g. stainless steel, injection molding" />
+          <label htmlFor="sp-capabilities" className="field-label">Brands / product lines</label>
+          <input id="sp-capabilities" name="capabilities" className="field-input" placeholder="e.g. brands you own or distribute" />
         </div>
       </div>
 
@@ -132,7 +132,7 @@ export function SupplierForm() {
 
       <div>
         <label htmlFor="sp-message" className="field-label">Message *</label>
-        <textarea id="sp-message" name="message" rows={5} className="field-input resize-none" placeholder="Tell us about your capabilities, certifications, and product categories." required />
+        <textarea id="sp-message" name="message" rows={5} className="field-input resize-none" placeholder="Tell us about your brand, product range and wholesale terms." required />
       </div>
 
       <button type="submit" disabled={status === "loading"} className="btn btn-primary w-full sm:w-auto">
