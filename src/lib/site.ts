@@ -11,6 +11,8 @@ export const siteConfig = {
     "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://zevrian.com",
   email: "info@zevrian.com",
+  phone: "+1 307 443 6480",
+  phoneHref: "+13074436480",
   amazonStoreName: "Zevrian Direct",
   amazonStoreUrl: "https://www.amazon.com/stores/zevrian",
   address: {
@@ -32,23 +34,23 @@ export const navLinks = [
   { label: "Home", href: "/" },
   { label: "Products", href: "/products" },
   { label: "About", href: "/about" },
-  { label: "Brand", href: "/brand" },
+  { label: "For Brands", href: "/brand" },
   { label: "Contact", href: "/contact" },
 ] as const;
 
 export const footerLinks = {
   shop: [
     { label: "All Categories", href: "/products" },
-    { label: "Sports & Outdoors", href: "/products" },
-    { label: "Arts & Crafts", href: "/products" },
-    { label: "Home & Kitchen", href: "/products" },
-    { label: "Home Improvement", href: "/products" },
-    { label: "Office Products", href: "/products" },
-    { label: "Pet Supplies", href: "/products" },
+    { label: "Sports & Outdoors", href: "/products#sports-outdoors" },
+    { label: "Arts & Crafts", href: "/products#arts-crafts" },
+    { label: "Home & Kitchen", href: "/products#home-kitchen" },
+    { label: "Home Improvement", href: "/products#home-improvement" },
+    { label: "Office Products", href: "/products#office-products" },
+    { label: "Pet Supplies", href: "/products#pet-supplies" },
   ],
   company: [
     { label: "About", href: "/about" },
-    { label: "Brand", href: "/brand" },
+    { label: "For Brands", href: "/brand" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

@@ -1,149 +1,193 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { Logo } from "@/components/Logo";
 import { siteConfig } from "@/lib/site";
+import { breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
+
+const pageDescription =
+  "How Zevrian Global LLC works with brands and authorized distributors: authentic sourcing, MAP compliance, brand protection on Amazon, and the business documents we provide.";
 
 export const metadata: Metadata = {
-  title: "Brand",
-  description:
-    "The Zevrian brand identity — logo, color system, typography, and the philosophy behind our luxury minimalist design.",
+  title: "For Brands & Suppliers",
+  description: pageDescription,
   keywords: [
-    "Zevrian brand",
-    "brand identity",
-    "logo design",
-    "color system",
-    "typography",
-    "luxury minimalist design",
+    "Zevrian Global LLC wholesale",
+    "Amazon reseller for brands",
+    "authorized Amazon reseller",
+    "MAP compliant Amazon seller",
+    "brand protection Amazon",
+    "wholesale account Amazon FBA",
   ],
   alternates: { canonical: "/brand" },
   openGraph: {
-    title: "Brand — Zevrian",
-    description:
-      "The Zevrian brand identity — logo, color system, typography, and design philosophy.",
+    title: "For Brands & Suppliers — Zevrian",
+    description: pageDescription,
     url: `${siteConfig.url}/brand`,
     type: "website",
   },
 };
 
-const palette = [
-  { name: "Charcoal", hex: "#0F0F0F", className: "bg-charcoal-900", text: "text-white" },
-  { name: "Gold", hex: "#C6A43F", className: "bg-gold", text: "text-charcoal-900" },
-  { name: "Pure White", hex: "#FFFFFF", className: "bg-white border border-charcoal-200", text: "text-charcoal-900" },
-  { name: "Stone", hex: "#FAFAFA", className: "bg-charcoal-50", text: "text-charcoal-900" },
+const howWeSell = [
+  {
+    title: "Amazon FBA only",
+    detail: `We sell through our ${siteConfig.amazonStoreName} storefront on Amazon. Inventory is stored, packed and shipped by Amazon's fulfillment network, so your customers get Prime delivery and Amazon's buyer protection.`,
+  },
+  {
+    title: "Existing listings",
+    detail:
+      "We sell on your existing Amazon product listings. We do not create duplicate listings or change your titles, images or brand content.",
+  },
+  {
+    title: "New and genuine",
+    detail:
+      "Every unit is new, in original packaging, and bought from you or your authorized distributor. We keep every purchase invoice on file.",
+  },
 ];
 
-export default function BrandPage() {
+const commitments = [
+  "Buy only from the brand or its authorized distributors",
+  "Follow your MAP and pricing policies on every listing",
+  "No relabelling, repackaging or unapproved bundles",
+  "No duplicate or competing listings of your products",
+  "Remove a listing promptly if you ask us to",
+  "Prepay every order and keep stock levels steady",
+];
+
+const documents = [
+  { label: "Legal entity", value: `${siteConfig.legalName} (Wyoming LLC)` },
+  { label: "Filing ID", value: siteConfig.filingId },
+  { label: "Federal tax ID", value: "EIN — available on request" },
+  { label: "Sales tax", value: "State Sales/Use Tax License — available on request" },
+];
+
+export default function ForBrandsPage() {
+  const breadcrumb = breadcrumbJsonLd([
+    { name: "Home", path: "/" },
+    { name: "For Brands & Suppliers", path: "/brand" },
+  ]);
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
+        dangerouslySetInnerHTML={jsonLdScript(breadcrumb)}
+      />
+
       <section className="bg-charcoal-950 py-20 sm:py-28">
         <Container>
           <div className="max-w-3xl">
-            <span className="eyebrow text-gold-light">Brand identity</span>
+            <span className="eyebrow text-gold-light">For brands &amp; suppliers</span>
             <h1 className="mt-4 text-4xl font-semibold leading-tight tracking-tight text-white sm:text-5xl">
-              A quiet confidence, expressed in every detail.
+              A careful reseller for your products on Amazon.
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
-              The Zevrian identity is built on luxury minimalism — generous
-              space, restrained color, and typography that lets the products
-              speak. Here&rsquo;s the system behind the brand.
+              {siteConfig.legalName} buys authentic products from brands and their
+              authorized distributors and sells them to US customers through Amazon
+              FBA. We protect your pricing, your listings and your reputation.
             </p>
+            <div className="mt-9 flex flex-col gap-3 sm:flex-row">
+              <a href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Wholesale partnership")}`} className="btn btn-gold">
+                Email {siteConfig.email}
+              </a>
+              <Link
+                href="/contact"
+                className="btn !border-charcoal-600 !bg-transparent !text-white hover:!border-gold"
+              >
+                Partnership form
+              </Link>
+            </div>
           </div>
         </Container>
       </section>
 
-      {/* Logo */}
+      {/* How we sell */}
       <section className="py-20 sm:py-28">
         <Container>
           <SectionHeading
-            align="left"
-            eyebrow="The mark"
-            title="The Zevrian logo"
-            description="A solid gold tile holding a clean geometric Z, paired with a spaced uppercase wordmark. The tile reads clearly on light and dark surfaces alike — a confident, modern mark in the language of premium consumer brands. Rendered as inline SVG for perfect clarity at any size."
+            eyebrow="How we sell"
+            title="Simple, transparent and Amazon-only."
+            description="One channel, clear rules, and no surprises for your brand."
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="flex items-center justify-center rounded-2xl border border-charcoal-100 bg-white p-16">
-              <Logo />
-            </div>
-            <div className="flex items-center justify-center rounded-2xl bg-charcoal-950 p-16">
-              <Logo variant="light" />
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Color */}
-      <section className="bg-charcoal-50 py-20 sm:py-28">
-        <Container>
-          <SectionHeading
-            align="left"
-            eyebrow="Color system"
-            title="Charcoal, gold, and space"
-            description="A disciplined palette: deep charcoal for authority, a single warm gold for moments of luxury, and abundant neutral space to let everything breathe."
-          />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {palette.map((color) => (
-              <div key={color.name} className="overflow-hidden rounded-2xl border border-charcoal-100 bg-white">
-                <div className={`flex h-32 items-end p-4 ${color.className}`}>
-                  <span className={`text-sm font-medium ${color.text}`}>
-                    {color.name}
-                  </span>
-                </div>
-                <div className="p-4">
-                  <p className="font-mono text-sm text-charcoal-700">{color.hex}</p>
-                </div>
+          <div className="mt-12 grid gap-6 lg:grid-cols-3">
+            {howWeSell.map((item) => (
+              <div key={item.title} className="card p-8">
+                <h3 className="text-lg font-semibold text-charcoal-900">{item.title}</h3>
+                <p className="mt-3 text-sm leading-relaxed text-charcoal-500">{item.detail}</p>
               </div>
             ))}
           </div>
         </Container>
       </section>
 
-      {/* Typography */}
-      <section className="py-20 sm:py-28">
+      {/* Commitments */}
+      <section className="bg-charcoal-50 py-20 sm:py-28">
         <Container>
           <SectionHeading
-            align="left"
-            eyebrow="Typography"
-            title="System sans-serif, by design"
-            description="Zevrian uses the native system font stack — no web fonts. It loads instantly, renders crisply on every device, and keeps the interface fast. Serif is intentionally avoided: premium minimalism is sans-serif."
+            eyebrow="Brand protection"
+            title="Our commitments to every brand we carry."
           />
-          <div className="mt-12 grid gap-6 lg:grid-cols-2">
-            <div className="card p-9">
-              <span className="eyebrow">Display · System Sans (700)</span>
-              <p className="mt-4 font-sans text-5xl font-bold tracking-tight text-charcoal-900">
-                Aa
-              </p>
-              <p className="mt-4 font-sans text-base leading-relaxed text-charcoal-500">
-                Headlines use tight tracking and bold weight for confident,
-                engineered hierarchy. Rendered with the platform&rsquo;s native
-                UI font for zero load cost.
+          <ul className="mx-auto mt-12 grid max-w-4xl gap-4 sm:grid-cols-2">
+            {commitments.map((item) => (
+              <li
+                key={item}
+                className="flex items-start gap-3 rounded-2xl border border-charcoal-100 bg-white p-5 text-sm leading-relaxed text-charcoal-700"
+              >
+                <svg className="mt-0.5 h-5 w-5 flex-none text-gold-600" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                  <path d="M5 12.5l4.5 4.5L19 7.5" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                </svg>
+                {item}
+              </li>
+            ))}
+          </ul>
+        </Container>
+      </section>
+
+      {/* Documents */}
+      <section className="py-20 sm:py-28">
+        <Container>
+          <div className="grid gap-12 lg:grid-cols-2 lg:gap-20">
+            <div>
+              <span className="eyebrow">Account setup</span>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-charcoal-900 sm:text-4xl">
+                Ready for your credit and account checks.
+              </h2>
+              <p className="mt-6 text-base leading-relaxed text-charcoal-500">
+                We are a registered US company. Our formation documents, EIN
+                confirmation and state tax registration are available to brands and
+                distributors during account setup.
               </p>
             </div>
-            <div className="card p-9">
-              <span className="eyebrow">Body · System Sans (400)</span>
-              <p className="mt-4 font-sans text-5xl font-normal text-charcoal-900">
-                Aa
-              </p>
-              <p className="mt-4 font-sans text-base leading-relaxed text-charcoal-500">
-                Body copy stays at 16px or larger with generous line-height for
-                comfortable, accessible reading across long-form content.
-              </p>
-            </div>
+            <dl className="card divide-y divide-charcoal-100 p-2">
+              {documents.map((doc) => (
+                <div key={doc.label} className="grid gap-1 px-6 py-5 sm:grid-cols-[10rem_1fr] sm:gap-4">
+                  <dt className="text-xs font-semibold uppercase tracking-luxe text-gold-600">{doc.label}</dt>
+                  <dd className="text-sm font-medium text-charcoal-900">{doc.value}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
         </Container>
       </section>
 
-      {/* Philosophy */}
-      <section className="bg-charcoal-950 py-20 sm:py-28">
+      {/* Contact */}
+      <section className="border-t border-charcoal-100 bg-charcoal-950 py-16 sm:py-20">
         <Container>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="eyebrow text-gold-light">Philosophy</span>
-            <p className="mt-6 font-display text-3xl leading-snug text-white sm:text-4xl">
-              &ldquo;Luxury is not excess. It is the quiet certainty that
-              everything has been considered.&rdquo;
-            </p>
-            <p className="mt-6 text-sm uppercase tracking-luxe text-charcoal-400">
-              The {siteConfig.name} design philosophy
+          <div className="flex flex-col items-center gap-6 text-center">
+            <h2 className="text-2xl font-semibold tracking-tight text-white sm:text-3xl">
+              Let&rsquo;s talk about carrying your products.
+            </h2>
+            <p className="max-w-xl text-base leading-relaxed text-charcoal-300">
+              Email{" "}
+              <a href={`mailto:${siteConfig.email}`} className="text-gold-light hover:text-gold">
+                {siteConfig.email}
+              </a>{" "}
+              or call{" "}
+              <a href={`tel:${siteConfig.phoneHref}`} className="text-gold-light hover:text-gold">
+                {siteConfig.phone}
+              </a>
+              . We aim to reply within one business day.
             </p>
           </div>
         </Container>

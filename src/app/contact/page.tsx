@@ -37,11 +37,13 @@ export default function ContactPage() {
             </h1>
             <p className="mt-6 text-lg leading-relaxed text-charcoal-300">
               Whether you&rsquo;re a customer with a question or a brand
-              who&rsquo;d like to work with us, use the right form below and our
-              team will respond promptly.
+              who&rsquo;d like to work with us, use the right form below and we
+              will respond promptly.
             </p>
             <p className="mt-3 text-base text-charcoal-300">
-              Email: <a href="mailto:info@zevrian.com" className="text-gold-light hover:text-gold">info@zevrian.com</a>
+              Email: <a href={`mailto:${siteConfig.email}`} className="text-gold-light hover:text-gold">{siteConfig.email}</a>
+              <span className="mx-3 text-charcoal-600">|</span>
+              Phone: <a href={`tel:${siteConfig.phoneHref}`} className="text-gold-light hover:text-gold">{siteConfig.phone}</a>
             </p>
           </div>
         </Container>
@@ -102,13 +104,19 @@ export default function ContactPage() {
             </div>
             <div>
               <h3 className="text-xs font-semibold uppercase tracking-luxe text-gold-600">
-                Email
+                Email &amp; phone
               </h3>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="mt-3 inline-block text-sm text-charcoal-600 transition-colors hover:text-gold-600"
+                className="mt-3 block text-sm text-charcoal-600 transition-colors hover:text-gold-600"
               >
                 {siteConfig.email}
+              </a>
+              <a
+                href={`tel:${siteConfig.phoneHref}`}
+                className="mt-1 block text-sm text-charcoal-600 transition-colors hover:text-gold-600"
+              >
+                {siteConfig.phone}
               </a>
             </div>
             <div>

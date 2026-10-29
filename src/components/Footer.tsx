@@ -39,17 +39,23 @@ export function Footer() {
                 {siteConfig.address.city}, {siteConfig.address.state}{" "}
                 {siteConfig.address.zip}
               </p>
-              <p className="mt-2 text-xs text-charcoal-400">
+              <p className="mt-2 text-xs text-charcoal-300">
                 Wyoming LLC — Filing ID: 2026-001998631
               </p>
-              <p className="text-xs text-charcoal-400">
+              <p className="text-xs text-charcoal-300">
                 Incorporated: June 5, 2026
               </p>
               <a
                 href={`mailto:${siteConfig.email}`}
-                className="inline-block pt-1 text-gold transition-colors hover:text-gold-light"
+                className="block pt-1 text-gold transition-colors hover:text-gold-light"
               >
                 {siteConfig.email}
+              </a>
+              <a
+                href={`tel:${siteConfig.phoneHref}`}
+                className="block text-gold transition-colors hover:text-gold-light"
+              >
+                {siteConfig.phone}
               </a>
             </address>
           </div>
@@ -57,8 +63,8 @@ export function Footer() {
 
         <div className="mt-14 flex flex-col gap-4 border-t border-charcoal-800 pt-8 text-sm text-charcoal-400 md:flex-row md:items-center md:justify-between">
           <p>
-            &copy; {year} {siteConfig.legalName}. All rights reserved. Located
-            in {siteConfig.address.city}, {siteConfig.address.stateLong}, {siteConfig.address.country}.
+            &copy; {year} {siteConfig.legalName}. All rights reserved. Registered
+            in {siteConfig.address.stateLong}, {siteConfig.address.country}.
           </p>
           <div className="flex flex-wrap gap-x-6 gap-y-2">
             {footerLinks.legal.map((link) => (
@@ -73,11 +79,11 @@ export function Footer() {
           </div>
         </div>
 
-        <p className="mt-6 text-xs leading-relaxed text-charcoal-500">
+        <p className="mt-6 text-xs leading-relaxed text-charcoal-300">
           {siteConfig.legalName} is an Amazon FBA wholesale retailer of
           authentic branded products, sold through our{" "}
           {siteConfig.amazonStoreName} storefront on Amazon. Address shown is
-          the registered principal address: {fullAddress}.
+          our registered office and mailing address: {fullAddress}.
         </p>
       </div>
     </footer>
@@ -98,7 +104,7 @@ function FooterColumn({
       </h3>
       <ul className="mt-5 space-y-3 text-sm">
         {links.map((link) => (
-          <li key={link.href}>
+          <li key={link.label}>
             <Link
               href={link.href}
               className="text-charcoal-300 transition-colors hover:text-white"

@@ -10,7 +10,7 @@ export const faqs = [
   },
   {
     q: "Is Zevrian a real company?",
-    a: `Yes. Zevrian is operated by ${siteConfig.legalName}, a US-registered company based at ${siteConfig.address.line1}, ${siteConfig.address.city}, ${siteConfig.address.stateLong}, ${siteConfig.address.country}.`,
+    a: `Yes. Zevrian is operated by ${siteConfig.legalName}, a US company registered in ${siteConfig.address.stateLong} (registered office: ${siteConfig.address.line1}, ${siteConfig.address.city}, ${siteConfig.address.state} ${siteConfig.address.zip}).`,
   },
   {
     q: "Does Zevrian ship internationally?",
@@ -26,11 +26,11 @@ export const faqs = [
   },
   {
     q: "I represent a brand. How can we work together?",
-    a: "We welcome wholesale partnerships with established brands. We respect MAP and pricing policies, keep listings accurate, and maintain steady stock. Email info@zevrian.com or use the supplier form on our contact page.",
+    a: "We welcome wholesale partnerships with established brands. We respect MAP and pricing policies, keep listings accurate, and maintain steady stock. Email info@zevrian.com or see our For Brands page.",
   },
   {
     q: "How can I contact Zevrian?",
-    a: `You can email us at info@zevrian.com or use the contact form on our contact page. We reply within one business day.`,
+    a: `You can email us at info@zevrian.com, call ${siteConfig.phone}, or use the contact page. We aim to reply within one business day.`,
   },
 ];
 

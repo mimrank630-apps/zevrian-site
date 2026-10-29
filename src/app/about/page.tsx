@@ -171,8 +171,8 @@ export default function AboutPage() {
           <div className="mx-auto mt-10 max-w-3xl">
             <div className="card p-9">
               <p className="text-base leading-relaxed text-charcoal-600">
-                Zevrian Global LLC was founded by Mohammad Imran Khan, an entrepreneur
-                originally from Nepal and currently based in Doha, Qatar.
+                Zevrian Global LLC was founded and is run by Mohammad Imran Khan,
+                who manages sourcing, brand relationships and operations directly.
               </p>
               <p className="mt-4 text-base leading-relaxed text-charcoal-600">
                 The company is incorporated in Wyoming, USA, as a registered Limited
@@ -214,7 +214,7 @@ export default function AboutPage() {
                 Our categories
               </Link>
               <Link href="/brand" className="btn btn-secondary">
-                See our brand identity
+                For brands &amp; suppliers
               </Link>
             </div>
           </div>

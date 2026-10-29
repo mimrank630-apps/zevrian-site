@@ -16,7 +16,9 @@ export function organizationJsonLd() {
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
     url: BASE,
+    legalName: siteConfig.legalName,
     email: siteConfig.email,
+    telephone: siteConfig.phone,
     logo: abs("/logo-512.png"),
     image: abs(siteConfig.ogImage),
     description: siteConfig.description,
@@ -32,6 +34,7 @@ export function organizationJsonLd() {
     contactPoint: {
       "@type": "ContactPoint",
       email: siteConfig.email,
+      telephone: siteConfig.phone,
       contactType: "sales",
       areaServed: "Worldwide",
       availableLanguage: ["English"],

@@ -2,33 +2,19 @@
 
 import { useState } from "react";
 import { categories } from "@/lib/products";
+import { siteConfig } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-const countries = [
-  "United States",
-  "China",
-  "India",
-  "Vietnam",
-  "Germany",
-  "Italy",
-  "Turkey",
-  "Mexico",
-  "South Korea",
-  "Japan",
-  "Other",
-];
-
 export function SupplierForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const formData = new FormData(form);
+    const formData = new FormData(e.currentTarget);
     const data = Object.fromEntries(formData.entries()) as Record<string, string>;
     const interests = formData.getAll("interest").map(String);
 
@@ -43,31 +29,20 @@ export function SupplierForm() {
       return;
     }
 
-    setStatus("loading");
-    setMessage("");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, interests, formType: "supplier" }),
-      });
-      const result = (await res.json().catch(() => ({}))) as {
-        message?: string;
-        error?: string;
-      };
-      if (!res.ok) {
-        setStatus("error");
-        setMessage(result.error ?? "Something went wrong. Please try again.");
-        return;
-      }
-      setStatus("success");
-      setMessage(result.message ?? "Thank you — our sourcing team will review your details.");
-      form.reset();
-    } catch {
-      setStatus("error");
-      setMessage("Network error. Please try again.");
-    }
+    const details = [
+      `Company: ${data.company.trim()}`,
+      `Contact: ${data.contactName.trim()}`,
+      `Email: ${data.email.trim()}`,
+      data.phone?.trim() ? `Phone: ${data.phone.trim()}` : "",
+      data.website?.trim() ? `Website: ${data.website.trim()}` : "",
+      data.capabilities?.trim() ? `Brands / product lines: ${data.capabilities.trim()}` : "",
+      interests.length ? `Categories: ${interests.join(", ")}` : "",
+    ].filter(Boolean);
+    const lines = [...details, "", data.message.trim()];
+    const subject = `Wholesale partnership - ${data.company.trim()}`;
+    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(lines.join("\n"))}`;
+    setStatus("success");
+    setMessage(`Your email app should now open with your details ready to send. If it doesn't, email us directly at ${siteConfig.email}.`);
   }
 
   return (
@@ -96,13 +71,8 @@ export function SupplierForm() {
 
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
-          <label htmlFor="sp-country" className="field-label">Country</label>
-          <select id="sp-country" name="country" className="field-input" defaultValue="">
-            <option value="" disabled>Select a country</option>
-            {countries.map((c) => (
-              <option key={c} value={c}>{c}</option>
-            ))}
-          </select>
+          <label htmlFor="sp-website" className="field-label">Website</label>
+          <input id="sp-website" name="website" type="url" className="field-input" placeholder="https://" />
         </div>
         <div>
           <label htmlFor="sp-capabilities" className="field-label">Brands / product lines</label>
@@ -135,8 +105,8 @@ export function SupplierForm() {
         <textarea id="sp-message" name="message" rows={5} className="field-input resize-none" placeholder="Tell us about your brand, product range and wholesale terms." required />
       </div>
 
-      <button type="submit" disabled={status === "loading"} className="btn btn-primary w-full sm:w-auto">
-        {status === "loading" ? "Submitting…" : "Submit inquiry"}
+      <button type="submit" className="btn btn-primary w-full sm:w-auto">
+        Submit inquiry
       </button>
 
       {message && (

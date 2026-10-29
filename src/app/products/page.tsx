@@ -73,7 +73,8 @@ export default function ProductsPage() {
             {categories.map((category) => (
               <div
                 key={category.slug}
-                className="relative flex aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-charcoal-100 p-7"
+                id={category.slug}
+                className="relative flex scroll-mt-28 aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-charcoal-100 p-7"
               >
                 <div
                   className={`absolute inset-0 bg-gradient-to-br ${

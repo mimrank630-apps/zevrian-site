@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { siteConfig } from "@/lib/site";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -19,10 +20,9 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
 
-  async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
+  function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = e.currentTarget;
-    const data = Object.fromEntries(new FormData(form).entries()) as Record<string, string>;
+    const data = Object.fromEntries(new FormData(e.currentTarget).entries()) as Record<string, string>;
 
     if (!data.name?.trim() || !data.message?.trim()) {
       setStatus("error");
@@ -35,31 +35,16 @@ export function ContactForm() {
       return;
     }
 
-    setStatus("loading");
-    setMessage("");
-
-    try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ ...data, formType: "support" }),
-      });
-      const result = (await res.json().catch(() => ({}))) as {
-        message?: string;
-        error?: string;
-      };
-      if (!res.ok) {
-        setStatus("error");
-        setMessage(result.error ?? "Something went wrong. Please try again.");
-        return;
-      }
-      setStatus("success");
-      setMessage(result.message ?? "Thanks — we'll be in touch shortly.");
-      form.reset();
-    } catch {
-      setStatus("error");
-      setMessage("Network error. Please try again.");
-    }
+    const subject = `${data.subject?.trim() || "Website enquiry"} - ${data.name.trim()}`;
+    const body = [
+      `Name: ${data.name.trim()}`,
+      `Email: ${data.email.trim()}`,
+      "",
+      data.message.trim(),
+    ].join("\n");
+    window.location.href = `mailto:${siteConfig.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    setStatus("success");
+    setMessage(`Your email app should now open with your message ready to send. If it doesn't, email us directly at ${siteConfig.email}.`);
   }
 
   return (
@@ -90,8 +75,8 @@ export function ContactForm() {
         <textarea id="cs-message" name="message" rows={5} className="field-input resize-none" placeholder="How can we help?" required />
       </div>
 
-      <button type="submit" disabled={status === "loading"} className="btn btn-primary w-full sm:w-auto">
-        {status === "loading" ? "Sending…" : "Send message"}
+      <button type="submit" className="btn btn-primary w-full sm:w-auto">
+        Send message
       </button>
 
       <FormMessage status={status} message={message} />

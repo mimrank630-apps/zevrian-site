@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CategoryCard } from "@/components/CategoryCard";
-import { NewsletterForm } from "@/components/forms/NewsletterForm";
 import { TrustBar } from "@/components/TrustBar";
 import { BrandPhilosophyStrip } from "@/components/sections/BrandPhilosophyStrip";
 import { AmazonTrustSection } from "@/components/sections/AmazonTrustSection";
@@ -140,7 +139,7 @@ export default function HomePage() {
       </section>
 
       {/* Trust */}
-      <section className="bg-charcoal-50 py-20 sm:py-28">
+      <section className="py-20 sm:py-28">
         <Container>
           <SectionHeading
             eyebrow="Why Zevrian"
@@ -179,14 +178,13 @@ export default function HomePage() {
             <SectionHeading
               eyebrow="Stay in the loop"
               title="Stay updated."
-              description="Occasional updates on new products and restocks from the Zevrian team."
+              description="Want to know when new products arrive? Email us and we will keep you posted."
             />
             <div className="mt-8 flex justify-center">
-              <NewsletterForm />
+              <a href={`mailto:${siteConfig.email}?subject=${encodeURIComponent("Product updates")}`} className="btn btn-primary">
+                Email us for updates
+              </a>
             </div>
-            <p className="mt-4 text-xs text-charcoal-400">
-              No spam. Unsubscribe anytime. We respect your inbox.
-            </p>
           </div>
         </Container>
       </section>
