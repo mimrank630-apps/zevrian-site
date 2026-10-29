@@ -188,14 +188,6 @@ export default function AboutPage() {
                     2026-001998631
                   </dd>
                 </div>
-                <div>
-                  <dt className="text-xs font-semibold uppercase tracking-luxe text-gold-600">
-                    Registered
-                  </dt>
-                  <dd className="mt-1 text-sm font-medium text-charcoal-900">
-                    June 5, 2026
-                  </dd>
-                </div>
               </dl>
             </div>
           </div>

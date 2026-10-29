@@ -39,12 +39,6 @@ export function Footer() {
                 {siteConfig.address.city}, {siteConfig.address.state}{" "}
                 {siteConfig.address.zip}
               </p>
-              <p className="mt-2 text-xs text-charcoal-300">
-                Wyoming LLC — Filing ID: 2026-001998631
-              </p>
-              <p className="text-xs text-charcoal-300">
-                Incorporated: June 5, 2026
-              </p>
               <a
                 href={`mailto:${siteConfig.email}`}
                 className="block pt-1 text-gold transition-colors hover:text-gold-light"
