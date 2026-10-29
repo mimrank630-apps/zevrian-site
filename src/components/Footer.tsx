@@ -16,7 +16,7 @@ export function Footer() {
               under {siteConfig.amazonStoreName}.
             </p>
             <Link
-              href="/contact"
+              href="/brand"
               className="btn btn-gold mt-6 !px-5 !py-2.5 text-xs"
             >
               Brand Partnerships

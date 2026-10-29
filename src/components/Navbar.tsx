@@ -62,7 +62,7 @@ export function Navbar() {
         </div>
 
         <div className="hidden lg:block">
-          <Link href="/contact" className="btn btn-gold !px-5 !py-2.5 text-xs">Brand Partnerships</Link>
+          <Link href="/brand" className="btn btn-gold !px-5 !py-2.5 text-xs">Brand Partnerships</Link>
         </div>
 
         <button
@@ -110,7 +110,7 @@ export function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link href="/contact" className="btn btn-gold mt-2 w-full">Brand Partnerships</Link>
+          <Link href="/brand" className="btn btn-gold mt-2 w-full">Brand Partnerships</Link>
         </div>
       </div>
     </header>

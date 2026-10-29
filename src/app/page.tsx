@@ -64,7 +64,7 @@ export default function HomePage() {
                 Our categories
               </Link>
               <Link
-                href="/contact"
+                href="/brand"
                 className="btn !border-charcoal-600 !bg-transparent !text-white hover:!border-gold"
               >
                 Brand partnerships
