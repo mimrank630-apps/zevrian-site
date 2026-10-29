@@ -10,7 +10,7 @@ const signals = [
   },
   {
     label: "US-Registered LLC",
-    detail: "Sheridan, Wyoming, USA",
+    detail: "Registered in Wyoming, USA",
     icon: <path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6" />,
   },
   {

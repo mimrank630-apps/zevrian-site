@@ -7,7 +7,7 @@ import { siteConfig } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
+    "About Zevrian Global LLC: a Wyoming-registered Amazon FBA wholesale retailer of authentic branded products. Our mission, values, roadmap and founder.",
   keywords: [
     "Zevrian about",
     "brand story",

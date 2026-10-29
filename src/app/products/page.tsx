@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Container } from "@/components/ui/Container";
+import { CategoryCard } from "@/components/CategoryCard";
 import { categories } from "@/lib/products";
 import { siteConfig } from "@/lib/site";
 import { breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
@@ -7,7 +8,7 @@ import { breadcrumbJsonLd, jsonLdScript } from "@/lib/seo";
 export const metadata: Metadata = {
   title: "Products",
   description:
-    "Zevrian Global LLC is a Wyoming-registered online retailer selling authentic branded products to US customers through Amazon, under the Zevrian Direct storefront.",
+    "Product categories sold by Zevrian Global LLC on Amazon: Sports & Outdoors, Arts & Crafts, Home & Kitchen, Home Improvement, Office Products and Pet Supplies, sourced from brands and authorized distributors.",
   keywords: [
     "Zevrian products",
     "sports and outdoors",
@@ -24,15 +25,6 @@ export const metadata: Metadata = {
     url: `${siteConfig.url}/products`,
     type: "website",
   },
-};
-
-const categoryAccent: Record<string, string> = {
-  "sports-outdoors": "from-sky-100 via-slate-100 to-zinc-300",
-  "arts-crafts": "from-amber-100 via-stone-100 to-stone-300",
-  "home-kitchen": "from-stone-100 via-neutral-100 to-zinc-300",
-  "home-improvement": "from-zinc-100 via-stone-200 to-zinc-400",
-  "office-products": "from-sky-50 via-slate-100 to-zinc-300",
-  "pet-supplies": "from-emerald-50 via-stone-100 to-stone-300",
 };
 
 export default function ProductsPage() {
@@ -71,27 +63,7 @@ export default function ProductsPage() {
         <Container>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
             {categories.map((category) => (
-              <div
-                key={category.slug}
-                id={category.slug}
-                className="relative flex scroll-mt-28 aspect-[4/5] flex-col justify-end overflow-hidden rounded-2xl border border-charcoal-100 p-7"
-              >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${
-                    categoryAccent[category.slug] ?? "from-stone-100 to-stone-300"
-                  }`}
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/55 via-charcoal-900/5 to-transparent" />
-
-                <div className="relative">
-                  <h3 className=" text-2xl font-semibold text-white">
-                    {category.name}
-                  </h3>
-                  <p className="mt-2 max-w-xs text-sm leading-relaxed text-white/80">
-                    {category.description}
-                  </p>
-                </div>
-              </div>
+              <CategoryCard key={category.slug} id={category.slug} category={category} />
             ))}
           </div>
         </Container>

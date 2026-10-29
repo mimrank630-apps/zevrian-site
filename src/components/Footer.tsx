@@ -77,7 +77,9 @@ export function Footer() {
           {siteConfig.legalName} is an Amazon FBA wholesale retailer of
           authentic branded products, sold through our{" "}
           {siteConfig.amazonStoreName} storefront on Amazon. Address shown is
-          our registered office and mailing address: {fullAddress}.
+          our registered office and mailing address: {fullAddress}. Product and
+          brand names mentioned on this site are trademarks of their respective
+          owners; their use does not imply endorsement or affiliation.
         </p>
       </div>
     </footer>

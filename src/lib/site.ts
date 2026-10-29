@@ -51,6 +51,8 @@ export const footerLinks = {
   company: [
     { label: "About", href: "/about" },
     { label: "For Brands", href: "/brand" },
+    { label: "Authenticity Policy", href: "/authenticity" },
+    { label: "Shipping & Returns", href: "/shipping-returns" },
     { label: "Contact", href: "/contact" },
   ],
   legal: [

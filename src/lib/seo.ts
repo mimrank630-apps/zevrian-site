@@ -23,6 +23,13 @@ export function organizationJsonLd() {
     image: abs(siteConfig.ogImage),
     description: siteConfig.description,
     foundingLocation: siteConfig.address.stateLong,
+    areaServed: { "@type": "Country", name: "United States" },
+    knowsAbout: [
+      "Amazon FBA wholesale",
+      "Authentic branded products",
+      "Brand protection",
+      "MAP pricing compliance",
+    ],
     address: {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.line1,
@@ -36,7 +43,7 @@ export function organizationJsonLd() {
       email: siteConfig.email,
       telephone: siteConfig.phone,
       contactType: "sales",
-      areaServed: "Worldwide",
+      areaServed: "US",
       availableLanguage: ["English"],
     },
   };

@@ -33,6 +33,14 @@ const trustPoints = [
   },
 ];
 
+const facts = [
+  { label: "Legal entity", value: `${siteConfig.legalName}` },
+  { label: "Registered", value: "Wyoming, USA" },
+  { label: "Sales channel", value: `Amazon FBA — ${siteConfig.amazonStoreName}` },
+  { label: "Sourcing", value: "Brands and authorized distributors only" },
+  { label: "Contact", value: `${siteConfig.email} · ${siteConfig.phone}` },
+];
+
 export default function HomePage() {
   return (
     <>
@@ -104,19 +112,19 @@ export default function HomePage() {
                 </svg>
               </Link>
             </div>
-            <div className="relative aspect-[4/3] overflow-hidden rounded-3xl bg-gradient-to-br from-stone-100 via-stone-50 to-amber-50">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <svg className="h-40 w-40 opacity-10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                  <rect x="12" y="1" width="15.5" height="15.5" rx="2" transform="rotate(45 12 1)" stroke="#111111" strokeWidth="1" />
-                  <path d="M8 8.5h8L8 15.5h8" stroke="#111111" strokeWidth="1.2" />
-                </svg>
-              </div>
-              <div className="absolute bottom-6 left-6 right-6 rounded-2xl bg-white/70 p-5 backdrop-blur-sm">
-                <p className="font-display text-lg text-charcoal-900">
-                  &ldquo;Genuine products. Honest selling.&rdquo;
-                </p>
-                <p className="mt-1 text-sm text-charcoal-500">The Zevrian principle</p>
-              </div>
+            <div className="rounded-3xl border border-charcoal-100 bg-charcoal-50 p-8 sm:p-10">
+              <span className="eyebrow">Company at a glance</span>
+              <dl className="mt-6 divide-y divide-charcoal-200/70">
+                {facts.map((fact) => (
+                  <div key={fact.label} className="grid gap-1 py-4 sm:grid-cols-[9rem_1fr] sm:gap-4">
+                    <dt className="text-xs font-semibold uppercase tracking-luxe text-gold-600">{fact.label}</dt>
+                    <dd className="text-sm font-medium text-charcoal-900">{fact.value}</dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="mt-6 font-display text-lg text-charcoal-900">
+                &ldquo;Genuine products. Honest selling.&rdquo;
+              </p>
             </div>
           </div>
         </Container>
