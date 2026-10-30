@@ -55,7 +55,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-14 flex flex-col gap-4 border-t border-charcoal-800 pt-8 text-sm text-charcoal-400 md:flex-row md:items-center md:justify-between">
+        <div className="mt-14 flex flex-col gap-4 border-t border-charcoal-800 pt-8 text-sm text-charcoal-300 md:flex-row md:items-center md:justify-between">
           <p>
             &copy; {year} {siteConfig.legalName}. All rights reserved. Registered
             in {siteConfig.address.stateLong}, {siteConfig.address.country}.
