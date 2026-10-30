@@ -157,7 +157,7 @@ export default function HomePage() {
           <div className="mt-12 grid gap-px overflow-hidden rounded-2xl border border-charcoal-100 bg-charcoal-100 sm:grid-cols-2 lg:grid-cols-4">
             {trustPoints.map((point, i) => (
               <div key={i} className="bg-white p-7">
-                <span className="font-display text-3xl text-gold">0{i + 1}</span>
+                <span className="font-display text-3xl text-gold-600">0{i + 1}</span>
                 <h3 className="mt-4 text-lg font-semibold text-charcoal-900">
                   {point.title}
                 </h3>

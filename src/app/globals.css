@@ -32,7 +32,7 @@
   }
 
   .eyebrow {
-    @apply text-xs font-semibold uppercase tracking-luxe text-gold-500;
+    @apply text-xs font-semibold uppercase tracking-luxe text-gold-600;
   }
 
   .btn {
